@@ -65,7 +65,7 @@ def call(params, retries=5):
             time.sleep(2 ** i)
             continue
         raise RuntimeError(f"{r.status_code}: {r.text[:300]}")
-    raise RuntimeError("재시도 초과")
+    raise RuntimeError(f"재시도 초과 ({r.status_code}): {r.text[:300]}")
 
 
 def abstract_from_index(inv):
@@ -145,6 +145,8 @@ def merge():
         df = pd.read_json(p, lines=True)
         df["matched_query"] = p.stem
         frames.append(df)
+    if not frames:
+        sys.exit(f"{RAW}에 수집 파일이 없습니다. 먼저 collect를 실행하세요.")
     df = pd.concat(frames, ignore_index=True)
     n_raw = len(df)
 
