@@ -1,0 +1,3 @@
+﻿query_id,query,filter,total_hits,collected,collected_at
+R01_damage_estimation,"(disaster OR ""emergency management"" OR ""disaster risk"" OR hazard OR ""crisis response"") AND (""damage assessment"" OR ""damage estimation"" OR ""loss estimation"")","publication_year:2015-2026,type:article|review,language:en,has_abstract:true",18578,500,2026-10-02T02:38:44
+R02_early_warning,"(disaster OR ""emergency management"" OR ""disaster risk"" OR hazard OR ""crisis response"") AND (""early warning"" OR ""alert dissemination"" OR ""warning system"")","publication_year:2015-2026,type:article|review,language:en,has_abstract:true",86526,500,2026-10-02T02:38:52
