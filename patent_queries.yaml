@@ -1,0 +1,329 @@
+# 분석과업 3 — Google Patents Public Data(BigQuery) 특허 수집 검색식
+# 근거: 분석과업 2 보고서 제7장 7.7절(F01~F06 기능·정보흐름·검색 시드)과 표 7-26(과업 3 인계)
+#
+# 구조
+#   settings  : GCP 프로젝트·기간·국가·비용 상한
+#   context   : 재난·안전 맥락어 (영문/국문)
+#   techs     : 미래도전기술(F01~F06)
+#     cpc       : 해당 F의 모든 요소기술에 공통으로 쓰는 CPC/IPC 접두어(공백 없이, 예: G08B21/10)
+#     elements  : 요소기술(E1, E2 …). 7.7절 "검색" 문단의 요소기술 분해를 그대로 따름
+#       blocks  : 기능 블록. 블록 안 용어는 OR, 블록끼리는 AND
+#       cpc     : 이 요소기술에만 추가하는 CPC(선택)
+#
+#   매칭 규칙(요소기술별): (모든 blocks 충족) AND (재난 맥락어 OR [F 공통 CPC + 요소 CPC])
+#   F 단위 결과 = 요소기술 결과의 합집합(패밀리 기준)
+#
+# ※ CPC는 후보입니다. EPO CPC 분류표/WIPO IPCPUB에서 정의를 확인하고 조정하세요.
+# ※ 새 CPC를 추가하면 stage1(후보 테이블)을 다시 만들어야 합니다(스크립트가 경고).
+# ※ 영문 용어는 대소문자·공백·하이픈 변형을 자동 허용합니다(heat wave = heat-wave = heatwave).
+#   단어 시작 경계만 걸리므로 "cascad"처럼 어간만 써도 cascade/cascading이 함께 잡힙니다.
+
+settings:
+  project: YOUR_GCP_PROJECT_ID      # 쿼리 비용이 청구될 GCP 프로젝트 ID
+  dataset: patents_work             # 후보 테이블을 저장할 내 데이터셋
+  location: US                      # 공개 데이터셋 위치와 동일해야 함
+  filing_from: 20060101             # 출원일 YYYYMMDD (20년)
+  filing_to: 20251231               # 최근 18개월 출원은 미공개분이 있어 건수가 과소 집계됨
+  countries: [KR, US, EP, JP, CN, WO]
+  search_claims: false              # true면 청구항까지 검색(스캔량 크게 증가)
+  max_gb_billed: 600                # 쿼리 1회 과금 상한(GB). 넘으면 실행 거부
+
+context:
+  # 특허에서 다른 뜻으로 흔한 단어는 구로 한정: evacuate(진공 배기), seismic(탄성파 탐사),
+  # cyclone(집진기), victim(victim cache), relief(압력 릴리프), flooding(네트워크 플러딩),
+  # 구조(구조물), 정전(정전기), 비상·긴급(비상정지·긴급제동)
+  en: [disaster, earthquake, tsunami, typhoon, hurricane, tropical cyclone, tornado, wildfire,
+       forest fire, bushfire, landslide, debris flow, flash flood, flood disaster, flood damage,
+       flood warning, flood risk, urban flood, river flood, floodwater, flood water, inundation,
+       evacuee, evacuation route, evacuation guid, evacuation plan, evacuation order,
+       evacuation instruction, evacuation shelter, evacuation center, emergency evacuation,
+       emergency management, emergency response, emergency responder, emergency rescue,
+       emergency shelter, emergency alert, emergency warning, emergency situation,
+       emergency dispatch, emergency command, emergency communication, emergency information,
+       search and rescue, rescue team, rescuer, first responder, firefight, fire fighting,
+       fire scene, fireground, fire department, public safety, crowd crush, stampede,
+       hazardous material, chemical accident, nuclear accident, radiological emergency,
+       radiation emergency, power outage, blackout, heat wave, mass casualty, casualties,
+       disaster victim, trapped person, incident command, crisis management, humanitarian,
+       calamit]
+  ko: [재난, 재해, 지진, 쓰나미, 해일, 태풍, 홍수, 침수, 산불, 산사태, 대피, 피난, 이재민,
+       인명구조, 인명 구조, 구조대, 구조 요청, 구급, 소방, 화재, 인명, 군중, 압사, 대규모 정전,
+       정전 사고, 폭염, 화학사고, 방사능, 구호, 상황실, 재난안전, 비상 대피, 비상 상황,
+       긴급 구조, 긴급 출동, 긴급재난]
+
+techs:
+  # ---------------------------------------------------------------------------
+  F01:
+    label: 정보 품질과 통신 상태를 함께 반영하는 공동 재난상황 인지
+    linked_R: [R02, R05, R07]
+    seeds: "common operational picture; incident data fusion; provenance; stale data; disruption tolerant communication"
+    cpc: [G06Q50/26, G08B25, G08B27, H04W4/90]
+    elements:
+      E1:
+        label: 사건 정합화(다기관 보고·신고의 동일 사건 식별·중복 통합)
+        blocks:
+          - en: [common operational picture, situational awareness, incident report, emergency report,
+                 emergency call, multi-agency, inter-agency, interagency, control center, command center]
+            ko: [상황판, 상황인지, 상황 공유, 신고 접수, 다기관, 기관 간, 상황실, 통합관제]
+          - en: [data fusion, information fusion, deduplicat, duplicate report, event correlation,
+                 incident correlation, record linkage, entity resolution, merging report, same incident]
+            ko: [정보 융합, 데이터 융합, 중복 신고, 동일 사건, 사건 통합, 정합]
+      E2:
+        label: 정보의 시간·출처 관리(유효시점·지연·오래된 정보·상충 탐지)
+        blocks:
+          - en: [provenance, timestamp, time stamp, data freshness, stale, outdated information,
+                 age of information, latency, delayed report, conflicting report, inconsistent information,
+                 information reliability, trustworthiness, confidence level]
+            ko: [출처, 시각 정보, 최신성, 지연 정보, 상충, 신뢰도, 정보 품질]
+          - en: [situational awareness, incident, emergency information, disaster information, situation map]
+            ko: [상황 정보, 재난 정보, 사건 정보, 상황도]
+      E3:
+        label: 단절 허용 전송(통신 불안정 시 필수정보 우선 전달)
+        cpc: [H04W84/18, H04W28/02, H04W4/06]
+        blocks:
+          - en: [delay tolerant, disruption tolerant, intermittent connect, store and forward, store-carry-forward,
+                 ad hoc network, mesh network, device to device, d2d, network failure, communication failure,
+                 degraded network, backup communication, public safety network, mission critical]
+            ko: [지연 허용, 단절, 애드혹, 메시 네트워크, 단말간 직접통신, 통신 장애, 백업 통신,
+                 재난안전통신망, 통신 두절]
+          - en: [priorit, essential information, critical message, emergency message, situation report, alert]
+            ko: [우선순위, 필수 정보, 긴급 메시지, 상황 보고, 경보]
+      E4:
+        label: 다기관 조치 인계·조치상태 추적
+        cpc: [G06Q10/06]
+        blocks:
+          - en: [multi-agency, inter-agency, interagency, cross-agency, multiple agencies, coordination,
+                 incident command system, dispatch center]
+            ko: [다기관, 기관 간, 유관기관, 공조, 협업, 지휘체계]
+          - en: [task assignment, task tracking, action status, handover, hand-off, work order,
+                 response status, resource tracking, command and control]
+            ko: [임무 할당, 조치 상태, 인계, 지휘, 출동 지령, 조치 이력]
+
+  # ---------------------------------------------------------------------------
+  F02:
+    label: 위험 변화와 접근성 조건을 반영하는 경보·대피계획 동시 갱신
+    linked_R: [R01, R03, R07, R08]
+    seeds: "adaptive warning; accessible emergency communication; dynamic evacuation routing; assisted evacuation"
+    cpc: [G08B7/06, G08B21/10, G08B27, H04W4/90]
+    elements:
+      E1:
+        label: 동적 대피경로(통제·위험 변화에 따른 경로 재계산)
+        cpc: [G01C21, G08G1]
+        blocks:
+          - en: [evacuation, evacuee, escape route, shelter]
+            ko: [대피, 피난, 대피소, 구호소]
+          - en: [dynamic rout, route guidance, path planning, rerout, real-time route, optimal route,
+                 navigation, road closure, blocked road]
+            ko: [경로 안내, 경로 탐색, 동적 경로, 재탐색, 도로 통제, 최적 경로]
+      E2:
+        label: 이동지원·제한자원 배분(취약계층 대피 지원 인력·차량 배정)
+        cpc: [G06Q10/04, G06Q10/06]
+        blocks:
+          - en: [assisted evacuation, evacuation assistance, mobility impair, disabled, disabilit, elderly,
+                 vulnerable people, special needs, wheelchair, caregiver, transport-dependent]
+            ko: [이동 지원, 거동 불편, 장애인, 고령자, 취약계층, 요배려자, 휠체어]
+          - en: [evacuation, evacuee, shelter, vehicle allocation, vehicle dispatch, resource allocation, assign]
+            ko: [대피, 차량 배정, 인력 배정, 자원 배분, 배치]
+      E3:
+        label: 접근성·다국어 의미 보존 경보
+        blocks:
+          - en: [accessib, multilingual, translat, sign language, hearing impair, deaf, visually impair,
+                 blind, text to speech, speech to text, easy read, foreign]
+            ko: [접근성, 다국어, 번역, 수어, 청각장애, 시각장애, 외국인, 음성 변환]
+          - en: [warning, alert, alarm, notification, evacuation instruction, protective action]
+            ko: [경보, 재난문자, 알림, 대피 안내, 행동요령]
+      E4:
+        label: 경보 버전관리·유효성 갱신(철회·변경·수신·이해 확인)
+        blocks:
+          - en: [warning, alert, emergency message, notification, broadcast]
+            ko: [경보, 재난문자, 긴급 메시지, 알림, 방송]
+          - en: [update, cancel, revok, withdraw, expir, validity, version, supersed,
+                 acknowledg, receipt confirm, delivery confirm, comprehension, response confirm]
+            ko: [갱신, 취소, 철회, 유효, 변경, 수신 확인, 응답 확인, 이해]
+
+  # ---------------------------------------------------------------------------
+  F03:
+    label: 붕괴·저시정 현장의 안전한 접근과 인명 탐색을 결합하는 의사결정 지원
+    linked_R: [R04, R08, R07, R03]
+    seeds: "search and rescue localization; non-line-of-sight sensing; structural hazard; uncertainty-aware search"
+    cpc: [A62B, G01S5/02, G01S13/88, G01V3/12]
+    elements:
+      E1:
+        label: 실내·비가시선 측위(구조대원·요구조자 위치추정)
+        cpc: [G01C21/20, G01C22, H04W4/02]
+        blocks:
+          - en: [indoor positioning, indoor localization, indoor localisation, indoor tracking,
+                 non-line-of-sight, nlos, ultra-wideband, uwb, pedestrian dead reckoning, inertial,
+                 gps-denied, gnss-denied]
+            ko: [실내 측위, 실내 위치, 비가시선, 초광대역, 관성 항법, 보행자 추측항법]
+          - en: [firefight, rescuer, first responder, victim, survivor, trapped, emergency responder,
+                 search and rescue, disaster site, smoke]
+            ko: [소방대원, 구조대원, 요구조자, 생존자, 고립, 매몰, 재난 현장, 연기]
+      E2:
+        label: 비접촉 생체신호·생존자 탐지
+        cpc: [A61B5/05, A61B5/0507]
+        blocks:
+          - en: [vital sign, life detection, life sign, breathing detect, respiration detect, heartbeat detect,
+                 through-wall, through wall, buried, under rubble, survivor detect, human presence]
+            ko: [생체 신호, 생명 탐지, 호흡 감지, 심박 감지, 투시, 매몰자, 생존자 탐지]
+          - en: [radar, microwave, uwb, wifi, acoustic, thermal, infrared, sensor]
+            ko: [레이더, 마이크로파, 음향, 열화상, 적외선, 센서]
+      E3:
+        label: 멀티모달 탐색(드론·로봇·열영상·음향 결합 수색)
+        cpc: [G05D1, B64U, G06V20/17]
+        blocks:
+          - en: [search and rescue, rescue robot, rescue drone, victim search, survivor search,
+                 victim detection, human detection, missing person]
+            ko: [수색, 구조 로봇, 구조 드론, 인명 수색, 인명 탐지, 실종자]
+          - en: [drone, unmanned aerial, uav, robot, thermal imag, infrared imag, multi-sensor,
+                 multimodal, sensor fusion, acoustic]
+            ko: [드론, 무인기, 로봇, 열화상, 다중 센서, 센서 융합, 음향]
+      E4:
+        label: 구조위험 정보 결합(붕괴 위험·접근 가능 통로 판단)
+        blocks:
+          - en: [structural collapse, collapse risk, building collapse, structural damage, structural integrity,
+                 structural hazard, secondary collapse, damaged building, structural health]
+            ko: [붕괴, 구조물 손상, 구조 안전, 2차 붕괴, 건물 피해, 안전진단]
+          - en: [rescue, firefight, first responder, entry, access route, safe route, search]
+            ko: [인명구조, 구조대, 소방, 진입, 접근 경로, 안전 경로, 수색]
+      E5:
+        label: 불확실성 기반 수색계획(탐색 우선구역·미관측 구역)
+        blocks:
+          - en: [search plan, search area, search priorit, probability map, probability of detection,
+                 coverage path, unexplored area, unobserved area, uncertainty]
+            ko: [수색 계획, 수색 구역, 탐색 우선, 확률 지도, 미탐색, 불확실성]
+          - en: [rescue, victim, survivor, missing person, disaster, firefight]
+            ko: [인명구조, 구조대, 요구조자, 생존자, 실종자, 재난, 소방]
+
+  # ---------------------------------------------------------------------------
+  F04:
+    label: 피해·생활수요의 변화를 반영하는 회복지원 배분 의사결정 지원
+    linked_R: [R09, R03, R02]
+    seeds: "humanitarian allocation; deprivation cost; post-disaster needs assessment; temporary housing assignment; dynamic resource allocation"
+    cpc: [G06Q50/26]
+    elements:
+      E1:
+        label: 피해·수요 확인(피해조사 상태·생활수요 평가)
+        cpc: [G06Q40/08]
+        blocks:
+          - en: [damage assessment, damage survey, damage estimat, needs assessment, demand estimat,
+                 loss assessment, damage claim, damage report, affected household, victim registr]
+            ko: [피해 조사, 피해 산정, 피해 접수, 수요 조사, 수요 예측, 이재민 등록, 피해 신고]
+          - en: [disaster, flood, earthquake, typhoon, hurricane, wildfire, disaster victim, recover]
+            ko: [재난, 재해, 홍수, 지진, 태풍, 산불, 이재민, 복구]
+      E2:
+        label: 구호물자·지원 배분 최적화(결핍비용·형평성)
+        cpc: [G06Q10/04, G06Q10/08, G06Q10/06]
+        blocks:
+          - en: [relief distribution, relief supplies, relief material, humanitarian logistic, aid distribution,
+                 emergency supplies, supply allocation, deprivation, equit, fairness]
+            ko: [구호물자, 구호 물품, 물자 배분, 지원 배분, 형평, 공평]
+          - en: [allocat, distribut, dispatch, optimi, schedul, prioriti]
+            ko: [배분, 분배, 배송, 최적화, 우선순위]
+      E3:
+        label: 임시주거·대피시설 배정
+        blocks:
+          - en: [temporary housing, temporary shelter, emergency shelter, evacuation shelter, shelter allocation,
+                 shelter assignment, accommodation, displaced]
+            ko: [임시주거, 임시 주택, 대피소, 대피시설, 구호소, 이재민 수용, 거처]
+          - en: [allocat, assign, match, priorit, capacity, decision support]
+            ko: [배정, 배분, 매칭, 우선순위, 수용 능력, 의사결정]
+      E4:
+        label: 변화 반영 동적 자원 재배분
+        cpc: [G06Q10/04, G06Q10/06]
+        blocks:
+          - en: [dynamic resource allocation, dynamic allocation, reallocat, real-time allocation,
+                 adaptive allocation, rolling horizon, re-plan]
+            ko: [동적 배분, 재배분, 실시간 배분, 재계획]
+          - en: [recover, relief, victim, shelter, support, aid]
+            ko: [복구, 구호, 이재민, 대피소, 지원]
+
+  # ---------------------------------------------------------------------------
+  F05:
+    label: 다기관 대응기록을 재현하여 훈련과 절차 개선에 연결하는 분석
+    linked_R: [R10, R02, R05, R08]
+    seeds: "incident reconstruction; after-action review; process mining for emergency response; event log alignment; exercise replay"
+    cpc: [G09B9, G09B19, G06Q50/26]
+    elements:
+      E1:
+        label: 이질 기록 정렬(기관별 로그·시간차·누락 보정)
+        blocks:
+          - en: [event log, activity log, radio log, communication log, record, timeline, time synchroni,
+                 clock offset, time alignment, log alignment, log integration]
+            ko: [기록, 로그, 무전 기록, 상황일지, 시간 동기화, 시간 정렬, 타임라인]
+          - en: [incident, emergency response, dispatch, multi-agency, command]
+            ko: [사고, 재난 대응, 출동, 다기관, 지휘]
+      E2:
+        label: 사건 재현·리플레이(당시 정보가용성 복원)
+        blocks:
+          - en: [reconstruct, replay, playback, reenact, re-enact, retrospective, post-incident,
+                 after-action, after action, debrief]
+            ko: [재현, 재구성, 리플레이, 사후 분석, 사후 평가, 디브리핑]
+          - en: [incident, accident, disaster, emergency response, fire]
+            ko: [사고, 재난, 화재, 대응]
+      E3:
+        label: 대응 프로세스 마이닝·병목 분석
+        blocks:
+          - en: [process mining, workflow analysis, bottleneck, procedure compliance, response process,
+                 conformance check]
+            ko: [프로세스 마이닝, 업무 흐름, 병목, 절차 준수, 대응 절차]
+          - en: [emergency, disaster, incident, dispatch, rescue]
+            ko: [재난, 사고, 출동, 인명구조, 긴급 출동]
+      E4:
+        label: 훈련 시뮬레이션·재훈련(결손 조건 주입·개선안 비교)
+        blocks:
+          - en: [training, exercise, drill, simulat, scenario injection, virtual reality, serious game]
+            ko: [훈련, 모의훈련, 연습, 시뮬레이션, 가상현실, 시나리오]
+          - en: [disaster, emergency response, incident command, multi-agency, firefight, evacuation]
+            ko: [재난, 재난 대응, 다기관, 소방, 대피, 지휘]
+
+  # ---------------------------------------------------------------------------
+  F06:
+    label: 기반시설 상호의존성과 불확실성을 반영하는 복합재난 영향 예측
+    linked_R: [R06, R07, R08, R09]
+    seeds: "interdependent infrastructure; Bayesian network; cascading service disruption; missing observations; online updating; restoration prioritization"
+    cpc: [G06Q50/06, G06Q10/0635]
+    elements:
+      E1:
+        label: 기반시설 상호의존성 모델링
+        blocks:
+          - en: [interdependen, dependency model, coupled infrastructure, critical infrastructure,
+                 infrastructure network, lifeline, multi-layer network, system of systems]
+            ko: [상호의존, 의존 관계, 기반시설, 생명선, 다층 네트워크]
+          - en: [power, electric, water, communication network, telecommunication, transport, gas, drainage]
+            ko: [전력, 상수도, 통신망, 교통, 가스, 배수]
+      E2:
+        label: 연쇄 서비스 중단 시뮬레이션
+        cpc: [G06F30/20]
+        blocks:
+          - en: [cascad, propagat, domino, knock-on, ripple effect, service disruption, service interruption,
+                 outage propagation, failure propagation]
+            ko: [연쇄, 전파, 도미노, 파급, 서비스 중단]
+          - en: [infrastructure, power grid, network, lifeline, facility]
+            ko: [기반시설, 전력망, 네트워크, 시설]
+      E3:
+        label: 확률적·불확실성 영향 예측(베이지안 등)
+        cpc: [G06N7/01]
+        blocks:
+          - en: [bayesian network, probabilistic model, uncertainty quantif, monte carlo, fragility,
+                 risk propagation, scenario tree, confidence interval]
+            ko: [베이지안, 확률 모델, 불확실성, 몬테카를로, 취약도]
+          - en: [infrastructure, compound, multi-hazard, cascad, disaster, outage]
+            ko: [기반시설, 복합재난, 연쇄, 재난, 대규모 정전]
+      E4:
+        label: 관측 결손 처리·온라인 갱신(데이터 동화)
+        blocks:
+          - en: [missing data, missing observation, sensor failure, data gap, incomplete observation,
+                 online updat, real-time updat, data assimilation, digital twin, state estimation]
+            ko: [결측, 관측 결손, 센서 고장, 실시간 갱신, 데이터 동화, 디지털 트윈, 상태 추정]
+          - en: [infrastructure, flood, power, network, cascad, disaster]
+            ko: [기반시설, 침수, 전력, 네트워크, 연쇄, 재난]
+      E5:
+        label: 복구 순서·우선순위 최적화
+        cpc: [G06Q10/04, G06Q10/20]
+        blocks:
+          - en: [restoration, repair schedul, recovery sequenc, recovery priorit, restoration priorit,
+                 crew dispatch, repair crew, service restoration]
+            ko: [복구 순서, 복구 우선순위, 복구 계획, 응급복구, 복구 인력]
+          - en: [infrastructure, power, distribution network, water, network, disaster, outage]
+            ko: [기반시설, 전력, 배전, 상수도, 재난, 정전 사고]
