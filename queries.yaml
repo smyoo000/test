@@ -14,7 +14,8 @@ settings:
 # 모든 R 검색식에 AND로 붙는 재난 맥락어
 context: >-
   (disaster OR disasters OR emergency OR "emergency management"
-   OR "crisis management" OR "public safety" OR hazard OR "disaster risk")
+   OR "crisis management" OR "public safety" OR "natural hazard" OR "natural hazards"
+   OR "hazard mitigation" OR "disaster risk")
 
 queries:
   R01:
@@ -26,7 +27,9 @@ queries:
   R02:
     label: 다기관 재난정보의 정합성과 대응상태를 통합
     seed: >-
-      ("common operational picture" OR "incident data fusion" OR interoperability
+      ("common operational picture" OR "incident data fusion"
+       OR (interoperability AND (responder OR responders OR "incident command" OR agencies
+           OR "information sharing" OR "situational awareness"))
        OR "multi-agency information sharing" OR "inter-agency coordination"
        OR "shared situational awareness")
   R03:
@@ -61,14 +64,19 @@ queries:
   R07:
     label: 이질 관측정보를 결합해 국소 위험징후를 탐지
     seed: >-
-      ("sensor fusion" OR "multimodal data" OR "multi-source data"
-       OR "crowd risk" OR "crowd crush" OR "anomaly detection"
+      ("sensor fusion"
+       OR ("multimodal data" AND (flood OR flooding OR landslide OR earthquake OR wildfire OR typhoon OR tsunami OR crowd OR "early warning"))
+       OR ("multi-source data" AND (flood OR flooding OR landslide OR earthquake OR wildfire OR typhoon OR tsunami OR crowd OR "early warning"))
+       OR "crowd risk" OR "crowd crush"
+       OR ("anomaly detection" AND (flood OR flooding OR landslide OR earthquake OR wildfire OR typhoon OR tsunami OR crowd OR "early warning"))
        OR "early warning detection")
   R08:
     label: 근거 기반으로 잠재위험과 안전관리 사각지대를 식별
     seed: >-
       ("emerging risk" OR "horizon scanning" OR "safety blind spot"
-       OR "latent risk" OR "near miss" OR "weak signal")
+       OR "latent risk"
+       OR ("near miss" AND (accident OR accidents OR "safety management" OR occupational OR industrial))
+       OR ("weak signal" AND (foresight OR "early warning" OR crisis OR "risk management")))
   R09:
     label: 피해와 생활수요에 맞추어 회복지원 우선순위를 산정
     seed: >-
