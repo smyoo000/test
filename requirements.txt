@@ -1,0 +1,4 @@
+google-cloud-bigquery>=3.11
+pandas>=2.0
+pyyaml>=6.0
+db-dtypes>=1.1
