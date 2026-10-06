@@ -1,0 +1,2057 @@
+{
+  "run_at": "2026-10-06T06:00:34",
+  "cmd": "count",
+  "settings": {
+    "project": "idyllic-coder-510805-s5",
+    "dataset": "patents_work",
+    "location": "US",
+    "filing_from": 20060101,
+    "filing_to": 20251231,
+    "countries": [
+      "KR",
+      "US",
+      "EP",
+      "JP",
+      "CN",
+      "WO"
+    ],
+    "search_claims": false,
+    "max_gb_billed": 600
+  },
+  "source": "patents-public-data.patents.publications",
+  "candidate_table": "`idyllic-coder-510805-s5.patents_work.pat_candidates`",
+  "techs": {
+    "F01_ALL": {
+      "label": "정보 품질과 통신 상태를 함께 반영하는 공동 재난상황 인지",
+      "n_pub": 1236,
+      "n_fam": 631,
+      "n_kr": 144
+    },
+    "F02_ALL": {
+      "label": "위험 변화와 접근성 조건을 반영하는 경보·대피계획 동시 갱신",
+      "n_pub": 5115,
+      "n_fam": 3785,
+      "n_kr": 963
+    },
+    "F03_ALL": {
+      "label": "붕괴·저시정 현장의 안전한 접근과 인명 탐색을 결합하는 의사결정 지원",
+      "n_pub": 6917,
+      "n_fam": 4977,
+      "n_kr": 927
+    },
+    "F04_ALL": {
+      "label": "피해·생활수요의 변화를 반영하는 회복지원 배분 의사결정 지원",
+      "n_pub": 2106,
+      "n_fam": 1634,
+      "n_kr": 91
+    },
+    "F05_ALL": {
+      "label": "다기관 대응기록을 재현하여 훈련과 절차 개선에 연결하는 분석",
+      "n_pub": 18753,
+      "n_fam": 13955,
+      "n_kr": 2101
+    },
+    "F06_ALL": {
+      "label": "기반시설 상호의존성과 불확실성을 반영하는 복합재난 영향 예측",
+      "n_pub": 10768,
+      "n_fam": 8066,
+      "n_kr": 612
+    },
+    "F01_E1": {
+      "parent": "F01",
+      "label": "사건 정합화(다기관 보고·신고의 동일 사건 식별·중복 통합)",
+      "n_pub": 70,
+      "n_fam": 54,
+      "n_kr": 11
+    },
+    "F01_E2": {
+      "parent": "F01",
+      "label": "정보의 시간·출처 관리(유효시점·지연·오래된 정보·상충 탐지)",
+      "n_pub": 68,
+      "n_fam": 45,
+      "n_kr": 21
+    },
+    "F01_E3": {
+      "parent": "F01",
+      "label": "단절 허용 전송(통신 불안정 시 필수정보 우선 전달)",
+      "n_pub": 991,
+      "n_fam": 460,
+      "n_kr": 90
+    },
+    "F01_E4": {
+      "parent": "F01",
+      "label": "다기관 조치 인계·조치상태 추적",
+      "n_pub": 107,
+      "n_fam": 72,
+      "n_kr": 22
+    },
+    "F02_E1": {
+      "parent": "F02",
+      "label": "동적 대피경로(통제·위험 변화에 따른 경로 재계산)",
+      "n_pub": 945,
+      "n_fam": 710,
+      "n_kr": 215
+    },
+    "F02_E2": {
+      "parent": "F02",
+      "label": "이동지원·제한자원 배분(취약계층 대피 지원 인력·차량 배정)",
+      "n_pub": 412,
+      "n_fam": 292,
+      "n_kr": 185
+    },
+    "F02_E3": {
+      "parent": "F02",
+      "label": "접근성·다국어 의미 보존 경보",
+      "n_pub": 1716,
+      "n_fam": 1426,
+      "n_kr": 220
+    },
+    "F02_E4": {
+      "parent": "F02",
+      "label": "경보 버전관리·유효성 갱신(철회·변경·수신·이해 확인)",
+      "n_pub": 2163,
+      "n_fam": 1439,
+      "n_kr": 388
+    },
+    "F03_E1": {
+      "parent": "F03",
+      "label": "실내·비가시선 측위(구조대원·요구조자 위치추정)",
+      "n_pub": 322,
+      "n_fam": 227,
+      "n_kr": 33
+    },
+    "F03_E2": {
+      "parent": "F03",
+      "label": "비접촉 생체신호·생존자 탐지",
+      "n_pub": 3513,
+      "n_fam": 2346,
+      "n_kr": 641
+    },
+    "F03_E3": {
+      "parent": "F03",
+      "label": "멀티모달 탐색(드론·로봇·열영상·음향 결합 수색)",
+      "n_pub": 2416,
+      "n_fam": 1906,
+      "n_kr": 159
+    },
+    "F03_E4": {
+      "parent": "F03",
+      "label": "구조위험 정보 결합(붕괴 위험·접근 가능 통로 판단)",
+      "n_pub": 207,
+      "n_fam": 162,
+      "n_kr": 90
+    },
+    "F03_E5": {
+      "parent": "F03",
+      "label": "불확실성 기반 수색계획(탐색 우선구역·미관측 구역)",
+      "n_pub": 654,
+      "n_fam": 483,
+      "n_kr": 23
+    },
+    "F04_E1": {
+      "parent": "F04",
+      "label": "피해·수요 확인(피해조사 상태·생활수요 평가)",
+      "n_pub": 444,
+      "n_fam": 346,
+      "n_kr": 36
+    },
+    "F04_E2": {
+      "parent": "F04",
+      "label": "구호물자·지원 배분 최적화(결핍비용·형평성)",
+      "n_pub": 1324,
+      "n_fam": 1019,
+      "n_kr": 38
+    },
+    "F04_E3": {
+      "parent": "F04",
+      "label": "임시주거·대피시설 배정",
+      "n_pub": 184,
+      "n_fam": 154,
+      "n_kr": 16
+    },
+    "F04_E4": {
+      "parent": "F04",
+      "label": "변화 반영 동적 자원 재배분",
+      "n_pub": 166,
+      "n_fam": 126,
+      "n_kr": 3
+    },
+    "F05_E1": {
+      "parent": "F05",
+      "label": "이질 기록 정렬(기관별 로그·시간차·누락 보정)",
+      "n_pub": 2890,
+      "n_fam": 2161,
+      "n_kr": 799
+    },
+    "F05_E2": {
+      "parent": "F05",
+      "label": "사건 재현·리플레이(당시 정보가용성 복원)",
+      "n_pub": 2471,
+      "n_fam": 1880,
+      "n_kr": 525
+    },
+    "F05_E3": {
+      "parent": "F05",
+      "label": "대응 프로세스 마이닝·병목 분석",
+      "n_pub": 428,
+      "n_fam": 323,
+      "n_kr": 50
+    },
+    "F05_E4": {
+      "parent": "F05",
+      "label": "훈련 시뮬레이션·재훈련(결손 조건 주입·개선안 비교)",
+      "n_pub": 13608,
+      "n_fam": 10064,
+      "n_kr": 822
+    },
+    "F06_E1": {
+      "parent": "F06",
+      "label": "기반시설 상호의존성 모델링",
+      "n_pub": 256,
+      "n_fam": 183,
+      "n_kr": 27
+    },
+    "F06_E2": {
+      "parent": "F06",
+      "label": "연쇄 서비스 중단 시뮬레이션",
+      "n_pub": 3374,
+      "n_fam": 2423,
+      "n_kr": 263
+    },
+    "F06_E3": {
+      "parent": "F06",
+      "label": "확률적·불확실성 영향 예측(베이지안 등)",
+      "n_pub": 672,
+      "n_fam": 495,
+      "n_kr": 26
+    },
+    "F06_E4": {
+      "parent": "F06",
+      "label": "관측 결손 처리·온라인 갱신(데이터 동화)",
+      "n_pub": 4270,
+      "n_fam": 3231,
+      "n_kr": 182
+    },
+    "F06_E5": {
+      "parent": "F06",
+      "label": "복구 순서·우선순위 최적화",
+      "n_pub": 2486,
+      "n_fam": 1953,
+      "n_kr": 123
+    }
+  },
+  "queries": [
+    {
+      "label": "F01(합집합)",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E1_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E2_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E3_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E4_cpc) p WHERE STARTS_WITH(c, p))))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F01_E1_b0_en",
+          "value": "\\b(?:common[\\s\\-]*operational[\\s\\-]*picture|situational[\\s\\-]*awareness|incident[\\s\\-]*report|emergency[\\s\\-]*report|emergency[\\s\\-]*call|multi[\\s\\-]*agency|inter[\\s\\-]*agency|interagency|control[\\s\\-]*center|command[\\s\\-]*center)"
+        },
+        {
+          "name": "F01_E1_b0_ko",
+          "value": "(?:상황판|상황인지|상황\\s*공유|신고\\s*접수|다기관|기관\\s*간|상황실|통합관제)"
+        },
+        {
+          "name": "F01_E1_b1_en",
+          "value": "\\b(?:data[\\s\\-]*fusion|information[\\s\\-]*fusion|deduplicat|duplicate[\\s\\-]*report|event[\\s\\-]*correlation|incident[\\s\\-]*correlation|record[\\s\\-]*linkage|entity[\\s\\-]*resolution|merging[\\s\\-]*report|same[\\s\\-]*incident)"
+        },
+        {
+          "name": "F01_E1_b1_ko",
+          "value": "(?:정보\\s*융합|데이터\\s*융합|중복\\s*신고|동일\\s*사건|사건\\s*통합|정합)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F01_E1_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90"
+          ]
+        },
+        {
+          "name": "F01_E2_b0_en",
+          "value": "\\b(?:provenance|timestamp|time[\\s\\-]*stamp|data[\\s\\-]*freshness|stale|outdated[\\s\\-]*information|age[\\s\\-]*of[\\s\\-]*information|latency|delayed[\\s\\-]*report|conflicting[\\s\\-]*report|inconsistent[\\s\\-]*information|information[\\s\\-]*reliability|trustworthiness|confidence[\\s\\-]*level)"
+        },
+        {
+          "name": "F01_E2_b0_ko",
+          "value": "(?:출처|시각\\s*정보|최신성|지연\\s*정보|상충|신뢰도|정보\\s*품질)"
+        },
+        {
+          "name": "F01_E2_b1_en",
+          "value": "\\b(?:situational[\\s\\-]*awareness|incident|emergency[\\s\\-]*information|disaster[\\s\\-]*information|situation[\\s\\-]*map)"
+        },
+        {
+          "name": "F01_E2_b1_ko",
+          "value": "(?:상황\\s*정보|재난\\s*정보|사건\\s*정보|상황도)"
+        },
+        {
+          "name": "F01_E2_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90"
+          ]
+        },
+        {
+          "name": "F01_E3_b0_en",
+          "value": "\\b(?:delay[\\s\\-]*tolerant|disruption[\\s\\-]*tolerant|intermittent[\\s\\-]*connect|store[\\s\\-]*and[\\s\\-]*forward|store[\\s\\-]*carry[\\s\\-]*forward|ad[\\s\\-]*hoc[\\s\\-]*network|mesh[\\s\\-]*network|device[\\s\\-]*to[\\s\\-]*device|d2d|network[\\s\\-]*failure|communication[\\s\\-]*failure|degraded[\\s\\-]*network|backup[\\s\\-]*communication|public[\\s\\-]*safety[\\s\\-]*network|mission[\\s\\-]*critical)"
+        },
+        {
+          "name": "F01_E3_b0_ko",
+          "value": "(?:지연\\s*허용|단절|애드혹|메시\\s*네트워크|단말간\\s*직접통신|통신\\s*장애|백업\\s*통신|재난안전통신망|통신\\s*두절)"
+        },
+        {
+          "name": "F01_E3_b1_en",
+          "value": "\\b(?:priorit|essential[\\s\\-]*information|critical[\\s\\-]*message|emergency[\\s\\-]*message|situation[\\s\\-]*report|alert)"
+        },
+        {
+          "name": "F01_E3_b1_ko",
+          "value": "(?:우선순위|필수\\s*정보|긴급\\s*메시지|상황\\s*보고|경보)"
+        },
+        {
+          "name": "F01_E3_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90",
+            "H04W84/18",
+            "H04W28/02",
+            "H04W4/06"
+          ]
+        },
+        {
+          "name": "F01_E4_b0_en",
+          "value": "\\b(?:multi[\\s\\-]*agency|inter[\\s\\-]*agency|interagency|cross[\\s\\-]*agency|multiple[\\s\\-]*agencies|coordination|incident[\\s\\-]*command[\\s\\-]*system|dispatch[\\s\\-]*center)"
+        },
+        {
+          "name": "F01_E4_b0_ko",
+          "value": "(?:다기관|기관\\s*간|유관기관|공조|협업|지휘체계)"
+        },
+        {
+          "name": "F01_E4_b1_en",
+          "value": "\\b(?:task[\\s\\-]*assignment|task[\\s\\-]*tracking|action[\\s\\-]*status|handover|hand[\\s\\-]*off|work[\\s\\-]*order|response[\\s\\-]*status|resource[\\s\\-]*tracking|command[\\s\\-]*and[\\s\\-]*control)"
+        },
+        {
+          "name": "F01_E4_b1_ko",
+          "value": "(?:임무\\s*할당|조치\\s*상태|인계|지휘|출동\\s*지령|조치\\s*이력)"
+        },
+        {
+          "name": "F01_E4_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90",
+            "G06Q10/06"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F02(합집합)",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E1_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E2_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E3_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E4_cpc) p WHERE STARTS_WITH(c, p))))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F02_E1_b0_en",
+          "value": "\\b(?:evacuation|evacuee|escape[\\s\\-]*route|shelter)"
+        },
+        {
+          "name": "F02_E1_b0_ko",
+          "value": "(?:대피|피난|대피소|구호소)"
+        },
+        {
+          "name": "F02_E1_b1_en",
+          "value": "\\b(?:dynamic[\\s\\-]*rout|route[\\s\\-]*guidance|path[\\s\\-]*planning|rerout|real[\\s\\-]*time[\\s\\-]*route|optimal[\\s\\-]*route|navigation|road[\\s\\-]*closure|blocked[\\s\\-]*road)"
+        },
+        {
+          "name": "F02_E1_b1_ko",
+          "value": "(?:경로\\s*안내|경로\\s*탐색|동적\\s*경로|재탐색|도로\\s*통제|최적\\s*경로)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F02_E1_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90",
+            "G01C21",
+            "G08G1"
+          ]
+        },
+        {
+          "name": "F02_E2_b0_en",
+          "value": "\\b(?:assisted[\\s\\-]*evacuation|evacuation[\\s\\-]*assistance|mobility[\\s\\-]*impair|disabled|disabilit|elderly|vulnerable[\\s\\-]*people|special[\\s\\-]*needs|wheelchair|caregiver|transport[\\s\\-]*dependent)"
+        },
+        {
+          "name": "F02_E2_b0_ko",
+          "value": "(?:이동\\s*지원|거동\\s*불편|장애인|고령자|취약계층|요배려자|휠체어)"
+        },
+        {
+          "name": "F02_E2_b1_en",
+          "value": "\\b(?:evacuation|evacuee|shelter|vehicle[\\s\\-]*allocation|vehicle[\\s\\-]*dispatch|resource[\\s\\-]*allocation|assign)"
+        },
+        {
+          "name": "F02_E2_b1_ko",
+          "value": "(?:대피|차량\\s*배정|인력\\s*배정|자원\\s*배분|배치)"
+        },
+        {
+          "name": "F02_E2_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90",
+            "G06Q10/04",
+            "G06Q10/06"
+          ]
+        },
+        {
+          "name": "F02_E3_b0_en",
+          "value": "\\b(?:accessib|multilingual|translat|sign[\\s\\-]*language|hearing[\\s\\-]*impair|deaf|visually[\\s\\-]*impair|blind|text[\\s\\-]*to[\\s\\-]*speech|speech[\\s\\-]*to[\\s\\-]*text|easy[\\s\\-]*read|foreign)"
+        },
+        {
+          "name": "F02_E3_b0_ko",
+          "value": "(?:접근성|다국어|번역|수어|청각장애|시각장애|외국인|음성\\s*변환)"
+        },
+        {
+          "name": "F02_E3_b1_en",
+          "value": "\\b(?:warning|alert|alarm|notification|evacuation[\\s\\-]*instruction|protective[\\s\\-]*action)"
+        },
+        {
+          "name": "F02_E3_b1_ko",
+          "value": "(?:경보|재난문자|알림|대피\\s*안내|행동요령)"
+        },
+        {
+          "name": "F02_E3_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90"
+          ]
+        },
+        {
+          "name": "F02_E4_b0_en",
+          "value": "\\b(?:warning|alert|emergency[\\s\\-]*message|notification|broadcast)"
+        },
+        {
+          "name": "F02_E4_b0_ko",
+          "value": "(?:경보|재난문자|긴급\\s*메시지|알림|방송)"
+        },
+        {
+          "name": "F02_E4_b1_en",
+          "value": "\\b(?:update|cancel|revok|withdraw|expir|validity|version|supersed|acknowledg|receipt[\\s\\-]*confirm|delivery[\\s\\-]*confirm|comprehension|response[\\s\\-]*confirm)"
+        },
+        {
+          "name": "F02_E4_b1_ko",
+          "value": "(?:갱신|취소|철회|유효|변경|수신\\s*확인|응답\\s*확인|이해)"
+        },
+        {
+          "name": "F02_E4_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F03(합집합)",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E1_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E2_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E3_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E4_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E5_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E5_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E5_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E5_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E5_cpc) p WHERE STARTS_WITH(c, p))))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F03_E1_b0_en",
+          "value": "\\b(?:indoor[\\s\\-]*positioning|indoor[\\s\\-]*localization|indoor[\\s\\-]*localisation|indoor[\\s\\-]*tracking|non[\\s\\-]*line[\\s\\-]*of[\\s\\-]*sight|nlos|ultra[\\s\\-]*wideband|uwb|pedestrian[\\s\\-]*dead[\\s\\-]*reckoning|inertial|gps[\\s\\-]*denied|gnss[\\s\\-]*denied)"
+        },
+        {
+          "name": "F03_E1_b0_ko",
+          "value": "(?:실내\\s*측위|실내\\s*위치|비가시선|초광대역|관성\\s*항법|보행자\\s*추측항법)"
+        },
+        {
+          "name": "F03_E1_b1_en",
+          "value": "\\b(?:firefight|rescuer|first[\\s\\-]*responder|victim|survivor|trapped|emergency[\\s\\-]*responder|search[\\s\\-]*and[\\s\\-]*rescue|disaster[\\s\\-]*site|smoke)"
+        },
+        {
+          "name": "F03_E1_b1_ko",
+          "value": "(?:소방대원|구조대원|요구조자|생존자|고립|매몰|재난\\s*현장|연기)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F03_E1_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12",
+            "G01C21/20",
+            "G01C22",
+            "H04W4/02"
+          ]
+        },
+        {
+          "name": "F03_E2_b0_en",
+          "value": "\\b(?:vital[\\s\\-]*sign|life[\\s\\-]*detection|life[\\s\\-]*sign|breathing[\\s\\-]*detect|respiration[\\s\\-]*detect|heartbeat[\\s\\-]*detect|through[\\s\\-]*wall|through[\\s\\-]*wall|buried|under[\\s\\-]*rubble|survivor[\\s\\-]*detect|human[\\s\\-]*presence)"
+        },
+        {
+          "name": "F03_E2_b0_ko",
+          "value": "(?:생체\\s*신호|생명\\s*탐지|호흡\\s*감지|심박\\s*감지|투시|매몰자|생존자\\s*탐지)"
+        },
+        {
+          "name": "F03_E2_b1_en",
+          "value": "\\b(?:radar|microwave|uwb|wifi|acoustic|thermal|infrared|sensor)"
+        },
+        {
+          "name": "F03_E2_b1_ko",
+          "value": "(?:레이더|마이크로파|음향|열화상|적외선|센서)"
+        },
+        {
+          "name": "F03_E2_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12",
+            "A61B5/05",
+            "A61B5/0507"
+          ]
+        },
+        {
+          "name": "F03_E3_b0_en",
+          "value": "\\b(?:search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*robot|rescue[\\s\\-]*drone|victim[\\s\\-]*search|survivor[\\s\\-]*search|victim[\\s\\-]*detection|human[\\s\\-]*detection|missing[\\s\\-]*person)"
+        },
+        {
+          "name": "F03_E3_b0_ko",
+          "value": "(?:수색|구조\\s*로봇|구조\\s*드론|인명\\s*수색|인명\\s*탐지|실종자)"
+        },
+        {
+          "name": "F03_E3_b1_en",
+          "value": "\\b(?:drone|unmanned[\\s\\-]*aerial|uav|robot|thermal[\\s\\-]*imag|infrared[\\s\\-]*imag|multi[\\s\\-]*sensor|multimodal|sensor[\\s\\-]*fusion|acoustic)"
+        },
+        {
+          "name": "F03_E3_b1_ko",
+          "value": "(?:드론|무인기|로봇|열화상|다중\\s*센서|센서\\s*융합|음향)"
+        },
+        {
+          "name": "F03_E3_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12",
+            "G05D1",
+            "B64U",
+            "G06V20/17"
+          ]
+        },
+        {
+          "name": "F03_E4_b0_en",
+          "value": "\\b(?:structural[\\s\\-]*collapse|collapse[\\s\\-]*risk|building[\\s\\-]*collapse|structural[\\s\\-]*damage|structural[\\s\\-]*integrity|structural[\\s\\-]*hazard|secondary[\\s\\-]*collapse|damaged[\\s\\-]*building|structural[\\s\\-]*health)"
+        },
+        {
+          "name": "F03_E4_b0_ko",
+          "value": "(?:붕괴|구조물\\s*손상|구조\\s*안전|2차\\s*붕괴|건물\\s*피해|안전진단)"
+        },
+        {
+          "name": "F03_E4_b1_en",
+          "value": "\\b(?:rescue|firefight|first[\\s\\-]*responder|entry|access[\\s\\-]*route|safe[\\s\\-]*route|search)"
+        },
+        {
+          "name": "F03_E4_b1_ko",
+          "value": "(?:인명구조|구조대|소방|진입|접근\\s*경로|안전\\s*경로|수색)"
+        },
+        {
+          "name": "F03_E4_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12"
+          ]
+        },
+        {
+          "name": "F03_E5_b0_en",
+          "value": "\\b(?:search[\\s\\-]*plan|search[\\s\\-]*area|search[\\s\\-]*priorit|probability[\\s\\-]*map|probability[\\s\\-]*of[\\s\\-]*detection|coverage[\\s\\-]*path|unexplored[\\s\\-]*area|unobserved[\\s\\-]*area|uncertainty)"
+        },
+        {
+          "name": "F03_E5_b0_ko",
+          "value": "(?:수색\\s*계획|수색\\s*구역|탐색\\s*우선|확률\\s*지도|미탐색|불확실성)"
+        },
+        {
+          "name": "F03_E5_b1_en",
+          "value": "\\b(?:rescue|victim|survivor|missing[\\s\\-]*person|disaster|firefight)"
+        },
+        {
+          "name": "F03_E5_b1_ko",
+          "value": "(?:인명구조|구조대|요구조자|생존자|실종자|재난|소방)"
+        },
+        {
+          "name": "F03_E5_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F04(합집합)",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E1_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E2_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E3_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E4_cpc) p WHERE STARTS_WITH(c, p))))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F04_E1_b0_en",
+          "value": "\\b(?:damage[\\s\\-]*assessment|damage[\\s\\-]*survey|damage[\\s\\-]*estimat|needs[\\s\\-]*assessment|demand[\\s\\-]*estimat|loss[\\s\\-]*assessment|damage[\\s\\-]*claim|damage[\\s\\-]*report|affected[\\s\\-]*household|victim[\\s\\-]*registr)"
+        },
+        {
+          "name": "F04_E1_b0_ko",
+          "value": "(?:피해\\s*조사|피해\\s*산정|피해\\s*접수|수요\\s*조사|수요\\s*예측|이재민\\s*등록|피해\\s*신고)"
+        },
+        {
+          "name": "F04_E1_b1_en",
+          "value": "\\b(?:disaster|flood|earthquake|typhoon|hurricane|wildfire|disaster[\\s\\-]*victim|recover)"
+        },
+        {
+          "name": "F04_E1_b1_ko",
+          "value": "(?:재난|재해|홍수|지진|태풍|산불|이재민|복구)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F04_E1_cpc",
+          "value": [
+            "G06Q50/26",
+            "G06Q40/08"
+          ]
+        },
+        {
+          "name": "F04_E2_b0_en",
+          "value": "\\b(?:relief[\\s\\-]*distribution|relief[\\s\\-]*supplies|relief[\\s\\-]*material|humanitarian[\\s\\-]*logistic|aid[\\s\\-]*distribution|emergency[\\s\\-]*supplies|supply[\\s\\-]*allocation|deprivation|equit|fairness)"
+        },
+        {
+          "name": "F04_E2_b0_ko",
+          "value": "(?:구호물자|구호\\s*물품|물자\\s*배분|지원\\s*배분|형평|공평)"
+        },
+        {
+          "name": "F04_E2_b1_en",
+          "value": "\\b(?:allocat|distribut|dispatch|optimi|schedul|prioriti)"
+        },
+        {
+          "name": "F04_E2_b1_ko",
+          "value": "(?:배분|분배|배송|최적화|우선순위)"
+        },
+        {
+          "name": "F04_E2_cpc",
+          "value": [
+            "G06Q50/26",
+            "G06Q10/04",
+            "G06Q10/08",
+            "G06Q10/06"
+          ]
+        },
+        {
+          "name": "F04_E3_b0_en",
+          "value": "\\b(?:temporary[\\s\\-]*housing|temporary[\\s\\-]*shelter|emergency[\\s\\-]*shelter|evacuation[\\s\\-]*shelter|shelter[\\s\\-]*allocation|shelter[\\s\\-]*assignment|accommodation|displaced)"
+        },
+        {
+          "name": "F04_E3_b0_ko",
+          "value": "(?:임시주거|임시\\s*주택|대피소|대피시설|구호소|이재민\\s*수용|거처)"
+        },
+        {
+          "name": "F04_E3_b1_en",
+          "value": "\\b(?:allocat|assign|match|priorit|capacity|decision[\\s\\-]*support)"
+        },
+        {
+          "name": "F04_E3_b1_ko",
+          "value": "(?:배정|배분|매칭|우선순위|수용\\s*능력|의사결정)"
+        },
+        {
+          "name": "F04_E3_cpc",
+          "value": [
+            "G06Q50/26"
+          ]
+        },
+        {
+          "name": "F04_E4_b0_en",
+          "value": "\\b(?:dynamic[\\s\\-]*resource[\\s\\-]*allocation|dynamic[\\s\\-]*allocation|reallocat|real[\\s\\-]*time[\\s\\-]*allocation|adaptive[\\s\\-]*allocation|rolling[\\s\\-]*horizon|re[\\s\\-]*plan)"
+        },
+        {
+          "name": "F04_E4_b0_ko",
+          "value": "(?:동적\\s*배분|재배분|실시간\\s*배분|재계획)"
+        },
+        {
+          "name": "F04_E4_b1_en",
+          "value": "\\b(?:recover|relief|victim|shelter|support|aid)"
+        },
+        {
+          "name": "F04_E4_b1_ko",
+          "value": "(?:복구|구호|이재민|대피소|지원)"
+        },
+        {
+          "name": "F04_E4_cpc",
+          "value": [
+            "G06Q50/26",
+            "G06Q10/04",
+            "G06Q10/06"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F05(합집합)",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E1_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E2_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E3_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E4_cpc) p WHERE STARTS_WITH(c, p))))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F05_E1_b0_en",
+          "value": "\\b(?:event[\\s\\-]*log|activity[\\s\\-]*log|radio[\\s\\-]*log|communication[\\s\\-]*log|record|timeline|time[\\s\\-]*synchroni|clock[\\s\\-]*offset|time[\\s\\-]*alignment|log[\\s\\-]*alignment|log[\\s\\-]*integration)"
+        },
+        {
+          "name": "F05_E1_b0_ko",
+          "value": "(?:기록|로그|무전\\s*기록|상황일지|시간\\s*동기화|시간\\s*정렬|타임라인)"
+        },
+        {
+          "name": "F05_E1_b1_en",
+          "value": "\\b(?:incident|emergency[\\s\\-]*response|dispatch|multi[\\s\\-]*agency|command)"
+        },
+        {
+          "name": "F05_E1_b1_ko",
+          "value": "(?:사고|재난\\s*대응|출동|다기관|지휘)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F05_E1_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        },
+        {
+          "name": "F05_E2_b0_en",
+          "value": "\\b(?:reconstruct|replay|playback|reenact|re[\\s\\-]*enact|retrospective|post[\\s\\-]*incident|after[\\s\\-]*action|after[\\s\\-]*action|debrief)"
+        },
+        {
+          "name": "F05_E2_b0_ko",
+          "value": "(?:재현|재구성|리플레이|사후\\s*분석|사후\\s*평가|디브리핑)"
+        },
+        {
+          "name": "F05_E2_b1_en",
+          "value": "\\b(?:incident|accident|disaster|emergency[\\s\\-]*response|fire)"
+        },
+        {
+          "name": "F05_E2_b1_ko",
+          "value": "(?:사고|재난|화재|대응)"
+        },
+        {
+          "name": "F05_E2_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        },
+        {
+          "name": "F05_E3_b0_en",
+          "value": "\\b(?:process[\\s\\-]*mining|workflow[\\s\\-]*analysis|bottleneck|procedure[\\s\\-]*compliance|response[\\s\\-]*process|conformance[\\s\\-]*check)"
+        },
+        {
+          "name": "F05_E3_b0_ko",
+          "value": "(?:프로세스\\s*마이닝|업무\\s*흐름|병목|절차\\s*준수|대응\\s*절차)"
+        },
+        {
+          "name": "F05_E3_b1_en",
+          "value": "\\b(?:emergency|disaster|incident|dispatch|rescue)"
+        },
+        {
+          "name": "F05_E3_b1_ko",
+          "value": "(?:재난|사고|출동|인명구조|긴급\\s*출동)"
+        },
+        {
+          "name": "F05_E3_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        },
+        {
+          "name": "F05_E4_b0_en",
+          "value": "\\b(?:training|exercise|drill|simulat|scenario[\\s\\-]*injection|virtual[\\s\\-]*reality|serious[\\s\\-]*game)"
+        },
+        {
+          "name": "F05_E4_b0_ko",
+          "value": "(?:훈련|모의훈련|연습|시뮬레이션|가상현실|시나리오)"
+        },
+        {
+          "name": "F05_E4_b1_en",
+          "value": "\\b(?:disaster|emergency[\\s\\-]*response|incident[\\s\\-]*command|multi[\\s\\-]*agency|firefight|evacuation)"
+        },
+        {
+          "name": "F05_E4_b1_ko",
+          "value": "(?:재난|재난\\s*대응|다기관|소방|대피|지휘)"
+        },
+        {
+          "name": "F05_E4_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F06(합집합)",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E1_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E2_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E3_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E4_cpc) p WHERE STARTS_WITH(c, p))))\n   OR ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E5_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E5_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E5_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E5_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E5_cpc) p WHERE STARTS_WITH(c, p))))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F06_E1_b0_en",
+          "value": "\\b(?:interdependen|dependency[\\s\\-]*model|coupled[\\s\\-]*infrastructure|critical[\\s\\-]*infrastructure|infrastructure[\\s\\-]*network|lifeline|multi[\\s\\-]*layer[\\s\\-]*network|system[\\s\\-]*of[\\s\\-]*systems)"
+        },
+        {
+          "name": "F06_E1_b0_ko",
+          "value": "(?:상호의존|의존\\s*관계|기반시설|생명선|다층\\s*네트워크)"
+        },
+        {
+          "name": "F06_E1_b1_en",
+          "value": "\\b(?:power|electric|water|communication[\\s\\-]*network|telecommunication|transport|gas|drainage)"
+        },
+        {
+          "name": "F06_E1_b1_ko",
+          "value": "(?:전력|상수도|통신망|교통|가스|배수)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F06_E1_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635"
+          ]
+        },
+        {
+          "name": "F06_E2_b0_en",
+          "value": "\\b(?:cascad|propagat|domino|knock[\\s\\-]*on|ripple[\\s\\-]*effect|service[\\s\\-]*disruption|service[\\s\\-]*interruption|outage[\\s\\-]*propagation|failure[\\s\\-]*propagation)"
+        },
+        {
+          "name": "F06_E2_b0_ko",
+          "value": "(?:연쇄|전파|도미노|파급|서비스\\s*중단)"
+        },
+        {
+          "name": "F06_E2_b1_en",
+          "value": "\\b(?:infrastructure|power[\\s\\-]*grid|network|lifeline|facility)"
+        },
+        {
+          "name": "F06_E2_b1_ko",
+          "value": "(?:기반시설|전력망|네트워크|시설)"
+        },
+        {
+          "name": "F06_E2_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635",
+            "G06F30/20"
+          ]
+        },
+        {
+          "name": "F06_E3_b0_en",
+          "value": "\\b(?:bayesian[\\s\\-]*network|probabilistic[\\s\\-]*model|uncertainty[\\s\\-]*quantif|monte[\\s\\-]*carlo|fragility|risk[\\s\\-]*propagation|scenario[\\s\\-]*tree|confidence[\\s\\-]*interval)"
+        },
+        {
+          "name": "F06_E3_b0_ko",
+          "value": "(?:베이지안|확률\\s*모델|불확실성|몬테카를로|취약도)"
+        },
+        {
+          "name": "F06_E3_b1_en",
+          "value": "\\b(?:infrastructure|compound|multi[\\s\\-]*hazard|cascad|disaster|outage)"
+        },
+        {
+          "name": "F06_E3_b1_ko",
+          "value": "(?:기반시설|복합재난|연쇄|재난|대규모\\s*정전)"
+        },
+        {
+          "name": "F06_E3_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635",
+            "G06N7/01"
+          ]
+        },
+        {
+          "name": "F06_E4_b0_en",
+          "value": "\\b(?:missing[\\s\\-]*data|missing[\\s\\-]*observation|sensor[\\s\\-]*failure|data[\\s\\-]*gap|incomplete[\\s\\-]*observation|online[\\s\\-]*updat|real[\\s\\-]*time[\\s\\-]*updat|data[\\s\\-]*assimilation|digital[\\s\\-]*twin|state[\\s\\-]*estimation)"
+        },
+        {
+          "name": "F06_E4_b0_ko",
+          "value": "(?:결측|관측\\s*결손|센서\\s*고장|실시간\\s*갱신|데이터\\s*동화|디지털\\s*트윈|상태\\s*추정)"
+        },
+        {
+          "name": "F06_E4_b1_en",
+          "value": "\\b(?:infrastructure|flood|power|network|cascad|disaster)"
+        },
+        {
+          "name": "F06_E4_b1_ko",
+          "value": "(?:기반시설|침수|전력|네트워크|연쇄|재난)"
+        },
+        {
+          "name": "F06_E4_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635"
+          ]
+        },
+        {
+          "name": "F06_E5_b0_en",
+          "value": "\\b(?:restoration|repair[\\s\\-]*schedul|recovery[\\s\\-]*sequenc|recovery[\\s\\-]*priorit|restoration[\\s\\-]*priorit|crew[\\s\\-]*dispatch|repair[\\s\\-]*crew|service[\\s\\-]*restoration)"
+        },
+        {
+          "name": "F06_E5_b0_ko",
+          "value": "(?:복구\\s*순서|복구\\s*우선순위|복구\\s*계획|응급복구|복구\\s*인력)"
+        },
+        {
+          "name": "F06_E5_b1_en",
+          "value": "\\b(?:infrastructure|power|distribution[\\s\\-]*network|water|network|disaster|outage)"
+        },
+        {
+          "name": "F06_E5_b1_ko",
+          "value": "(?:기반시설|전력|배전|상수도|재난|정전\\s*사고)"
+        },
+        {
+          "name": "F06_E5_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635",
+            "G06Q10/04",
+            "G06Q10/20"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F01_E1",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E1_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F01_E1_b0_en",
+          "value": "\\b(?:common[\\s\\-]*operational[\\s\\-]*picture|situational[\\s\\-]*awareness|incident[\\s\\-]*report|emergency[\\s\\-]*report|emergency[\\s\\-]*call|multi[\\s\\-]*agency|inter[\\s\\-]*agency|interagency|control[\\s\\-]*center|command[\\s\\-]*center)"
+        },
+        {
+          "name": "F01_E1_b0_ko",
+          "value": "(?:상황판|상황인지|상황\\s*공유|신고\\s*접수|다기관|기관\\s*간|상황실|통합관제)"
+        },
+        {
+          "name": "F01_E1_b1_en",
+          "value": "\\b(?:data[\\s\\-]*fusion|information[\\s\\-]*fusion|deduplicat|duplicate[\\s\\-]*report|event[\\s\\-]*correlation|incident[\\s\\-]*correlation|record[\\s\\-]*linkage|entity[\\s\\-]*resolution|merging[\\s\\-]*report|same[\\s\\-]*incident)"
+        },
+        {
+          "name": "F01_E1_b1_ko",
+          "value": "(?:정보\\s*융합|데이터\\s*융합|중복\\s*신고|동일\\s*사건|사건\\s*통합|정합)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F01_E1_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F01_E2",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E2_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F01_E2_b0_en",
+          "value": "\\b(?:provenance|timestamp|time[\\s\\-]*stamp|data[\\s\\-]*freshness|stale|outdated[\\s\\-]*information|age[\\s\\-]*of[\\s\\-]*information|latency|delayed[\\s\\-]*report|conflicting[\\s\\-]*report|inconsistent[\\s\\-]*information|information[\\s\\-]*reliability|trustworthiness|confidence[\\s\\-]*level)"
+        },
+        {
+          "name": "F01_E2_b0_ko",
+          "value": "(?:출처|시각\\s*정보|최신성|지연\\s*정보|상충|신뢰도|정보\\s*품질)"
+        },
+        {
+          "name": "F01_E2_b1_en",
+          "value": "\\b(?:situational[\\s\\-]*awareness|incident|emergency[\\s\\-]*information|disaster[\\s\\-]*information|situation[\\s\\-]*map)"
+        },
+        {
+          "name": "F01_E2_b1_ko",
+          "value": "(?:상황\\s*정보|재난\\s*정보|사건\\s*정보|상황도)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F01_E2_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F01_E3",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E3_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F01_E3_b0_en",
+          "value": "\\b(?:delay[\\s\\-]*tolerant|disruption[\\s\\-]*tolerant|intermittent[\\s\\-]*connect|store[\\s\\-]*and[\\s\\-]*forward|store[\\s\\-]*carry[\\s\\-]*forward|ad[\\s\\-]*hoc[\\s\\-]*network|mesh[\\s\\-]*network|device[\\s\\-]*to[\\s\\-]*device|d2d|network[\\s\\-]*failure|communication[\\s\\-]*failure|degraded[\\s\\-]*network|backup[\\s\\-]*communication|public[\\s\\-]*safety[\\s\\-]*network|mission[\\s\\-]*critical)"
+        },
+        {
+          "name": "F01_E3_b0_ko",
+          "value": "(?:지연\\s*허용|단절|애드혹|메시\\s*네트워크|단말간\\s*직접통신|통신\\s*장애|백업\\s*통신|재난안전통신망|통신\\s*두절)"
+        },
+        {
+          "name": "F01_E3_b1_en",
+          "value": "\\b(?:priorit|essential[\\s\\-]*information|critical[\\s\\-]*message|emergency[\\s\\-]*message|situation[\\s\\-]*report|alert)"
+        },
+        {
+          "name": "F01_E3_b1_ko",
+          "value": "(?:우선순위|필수\\s*정보|긴급\\s*메시지|상황\\s*보고|경보)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F01_E3_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90",
+            "H04W84/18",
+            "H04W28/02",
+            "H04W4/06"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F01_E4",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F01_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F01_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F01_E4_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F01_E4_b0_en",
+          "value": "\\b(?:multi[\\s\\-]*agency|inter[\\s\\-]*agency|interagency|cross[\\s\\-]*agency|multiple[\\s\\-]*agencies|coordination|incident[\\s\\-]*command[\\s\\-]*system|dispatch[\\s\\-]*center)"
+        },
+        {
+          "name": "F01_E4_b0_ko",
+          "value": "(?:다기관|기관\\s*간|유관기관|공조|협업|지휘체계)"
+        },
+        {
+          "name": "F01_E4_b1_en",
+          "value": "\\b(?:task[\\s\\-]*assignment|task[\\s\\-]*tracking|action[\\s\\-]*status|handover|hand[\\s\\-]*off|work[\\s\\-]*order|response[\\s\\-]*status|resource[\\s\\-]*tracking|command[\\s\\-]*and[\\s\\-]*control)"
+        },
+        {
+          "name": "F01_E4_b1_ko",
+          "value": "(?:임무\\s*할당|조치\\s*상태|인계|지휘|출동\\s*지령|조치\\s*이력)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F01_E4_cpc",
+          "value": [
+            "G06Q50/26",
+            "G08B25",
+            "G08B27",
+            "H04W4/90",
+            "G06Q10/06"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F02_E1",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E1_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F02_E1_b0_en",
+          "value": "\\b(?:evacuation|evacuee|escape[\\s\\-]*route|shelter)"
+        },
+        {
+          "name": "F02_E1_b0_ko",
+          "value": "(?:대피|피난|대피소|구호소)"
+        },
+        {
+          "name": "F02_E1_b1_en",
+          "value": "\\b(?:dynamic[\\s\\-]*rout|route[\\s\\-]*guidance|path[\\s\\-]*planning|rerout|real[\\s\\-]*time[\\s\\-]*route|optimal[\\s\\-]*route|navigation|road[\\s\\-]*closure|blocked[\\s\\-]*road)"
+        },
+        {
+          "name": "F02_E1_b1_ko",
+          "value": "(?:경로\\s*안내|경로\\s*탐색|동적\\s*경로|재탐색|도로\\s*통제|최적\\s*경로)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F02_E1_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90",
+            "G01C21",
+            "G08G1"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F02_E2",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E2_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F02_E2_b0_en",
+          "value": "\\b(?:assisted[\\s\\-]*evacuation|evacuation[\\s\\-]*assistance|mobility[\\s\\-]*impair|disabled|disabilit|elderly|vulnerable[\\s\\-]*people|special[\\s\\-]*needs|wheelchair|caregiver|transport[\\s\\-]*dependent)"
+        },
+        {
+          "name": "F02_E2_b0_ko",
+          "value": "(?:이동\\s*지원|거동\\s*불편|장애인|고령자|취약계층|요배려자|휠체어)"
+        },
+        {
+          "name": "F02_E2_b1_en",
+          "value": "\\b(?:evacuation|evacuee|shelter|vehicle[\\s\\-]*allocation|vehicle[\\s\\-]*dispatch|resource[\\s\\-]*allocation|assign)"
+        },
+        {
+          "name": "F02_E2_b1_ko",
+          "value": "(?:대피|차량\\s*배정|인력\\s*배정|자원\\s*배분|배치)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F02_E2_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90",
+            "G06Q10/04",
+            "G06Q10/06"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F02_E3",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E3_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F02_E3_b0_en",
+          "value": "\\b(?:accessib|multilingual|translat|sign[\\s\\-]*language|hearing[\\s\\-]*impair|deaf|visually[\\s\\-]*impair|blind|text[\\s\\-]*to[\\s\\-]*speech|speech[\\s\\-]*to[\\s\\-]*text|easy[\\s\\-]*read|foreign)"
+        },
+        {
+          "name": "F02_E3_b0_ko",
+          "value": "(?:접근성|다국어|번역|수어|청각장애|시각장애|외국인|음성\\s*변환)"
+        },
+        {
+          "name": "F02_E3_b1_en",
+          "value": "\\b(?:warning|alert|alarm|notification|evacuation[\\s\\-]*instruction|protective[\\s\\-]*action)"
+        },
+        {
+          "name": "F02_E3_b1_ko",
+          "value": "(?:경보|재난문자|알림|대피\\s*안내|행동요령)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F02_E3_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F02_E4",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F02_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F02_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F02_E4_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F02_E4_b0_en",
+          "value": "\\b(?:warning|alert|emergency[\\s\\-]*message|notification|broadcast)"
+        },
+        {
+          "name": "F02_E4_b0_ko",
+          "value": "(?:경보|재난문자|긴급\\s*메시지|알림|방송)"
+        },
+        {
+          "name": "F02_E4_b1_en",
+          "value": "\\b(?:update|cancel|revok|withdraw|expir|validity|version|supersed|acknowledg|receipt[\\s\\-]*confirm|delivery[\\s\\-]*confirm|comprehension|response[\\s\\-]*confirm)"
+        },
+        {
+          "name": "F02_E4_b1_ko",
+          "value": "(?:갱신|취소|철회|유효|변경|수신\\s*확인|응답\\s*확인|이해)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F02_E4_cpc",
+          "value": [
+            "G08B7/06",
+            "G08B21/10",
+            "G08B27",
+            "H04W4/90"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F03_E1",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E1_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F03_E1_b0_en",
+          "value": "\\b(?:indoor[\\s\\-]*positioning|indoor[\\s\\-]*localization|indoor[\\s\\-]*localisation|indoor[\\s\\-]*tracking|non[\\s\\-]*line[\\s\\-]*of[\\s\\-]*sight|nlos|ultra[\\s\\-]*wideband|uwb|pedestrian[\\s\\-]*dead[\\s\\-]*reckoning|inertial|gps[\\s\\-]*denied|gnss[\\s\\-]*denied)"
+        },
+        {
+          "name": "F03_E1_b0_ko",
+          "value": "(?:실내\\s*측위|실내\\s*위치|비가시선|초광대역|관성\\s*항법|보행자\\s*추측항법)"
+        },
+        {
+          "name": "F03_E1_b1_en",
+          "value": "\\b(?:firefight|rescuer|first[\\s\\-]*responder|victim|survivor|trapped|emergency[\\s\\-]*responder|search[\\s\\-]*and[\\s\\-]*rescue|disaster[\\s\\-]*site|smoke)"
+        },
+        {
+          "name": "F03_E1_b1_ko",
+          "value": "(?:소방대원|구조대원|요구조자|생존자|고립|매몰|재난\\s*현장|연기)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F03_E1_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12",
+            "G01C21/20",
+            "G01C22",
+            "H04W4/02"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F03_E2",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E2_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F03_E2_b0_en",
+          "value": "\\b(?:vital[\\s\\-]*sign|life[\\s\\-]*detection|life[\\s\\-]*sign|breathing[\\s\\-]*detect|respiration[\\s\\-]*detect|heartbeat[\\s\\-]*detect|through[\\s\\-]*wall|through[\\s\\-]*wall|buried|under[\\s\\-]*rubble|survivor[\\s\\-]*detect|human[\\s\\-]*presence)"
+        },
+        {
+          "name": "F03_E2_b0_ko",
+          "value": "(?:생체\\s*신호|생명\\s*탐지|호흡\\s*감지|심박\\s*감지|투시|매몰자|생존자\\s*탐지)"
+        },
+        {
+          "name": "F03_E2_b1_en",
+          "value": "\\b(?:radar|microwave|uwb|wifi|acoustic|thermal|infrared|sensor)"
+        },
+        {
+          "name": "F03_E2_b1_ko",
+          "value": "(?:레이더|마이크로파|음향|열화상|적외선|센서)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F03_E2_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12",
+            "A61B5/05",
+            "A61B5/0507"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F03_E3",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E3_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F03_E3_b0_en",
+          "value": "\\b(?:search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*robot|rescue[\\s\\-]*drone|victim[\\s\\-]*search|survivor[\\s\\-]*search|victim[\\s\\-]*detection|human[\\s\\-]*detection|missing[\\s\\-]*person)"
+        },
+        {
+          "name": "F03_E3_b0_ko",
+          "value": "(?:수색|구조\\s*로봇|구조\\s*드론|인명\\s*수색|인명\\s*탐지|실종자)"
+        },
+        {
+          "name": "F03_E3_b1_en",
+          "value": "\\b(?:drone|unmanned[\\s\\-]*aerial|uav|robot|thermal[\\s\\-]*imag|infrared[\\s\\-]*imag|multi[\\s\\-]*sensor|multimodal|sensor[\\s\\-]*fusion|acoustic)"
+        },
+        {
+          "name": "F03_E3_b1_ko",
+          "value": "(?:드론|무인기|로봇|열화상|다중\\s*센서|센서\\s*융합|음향)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F03_E3_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12",
+            "G05D1",
+            "B64U",
+            "G06V20/17"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F03_E4",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E4_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F03_E4_b0_en",
+          "value": "\\b(?:structural[\\s\\-]*collapse|collapse[\\s\\-]*risk|building[\\s\\-]*collapse|structural[\\s\\-]*damage|structural[\\s\\-]*integrity|structural[\\s\\-]*hazard|secondary[\\s\\-]*collapse|damaged[\\s\\-]*building|structural[\\s\\-]*health)"
+        },
+        {
+          "name": "F03_E4_b0_ko",
+          "value": "(?:붕괴|구조물\\s*손상|구조\\s*안전|2차\\s*붕괴|건물\\s*피해|안전진단)"
+        },
+        {
+          "name": "F03_E4_b1_en",
+          "value": "\\b(?:rescue|firefight|first[\\s\\-]*responder|entry|access[\\s\\-]*route|safe[\\s\\-]*route|search)"
+        },
+        {
+          "name": "F03_E4_b1_ko",
+          "value": "(?:인명구조|구조대|소방|진입|접근\\s*경로|안전\\s*경로|수색)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F03_E4_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F03_E5",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E5_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E5_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F03_E5_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F03_E5_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F03_E5_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F03_E5_b0_en",
+          "value": "\\b(?:search[\\s\\-]*plan|search[\\s\\-]*area|search[\\s\\-]*priorit|probability[\\s\\-]*map|probability[\\s\\-]*of[\\s\\-]*detection|coverage[\\s\\-]*path|unexplored[\\s\\-]*area|unobserved[\\s\\-]*area|uncertainty)"
+        },
+        {
+          "name": "F03_E5_b0_ko",
+          "value": "(?:수색\\s*계획|수색\\s*구역|탐색\\s*우선|확률\\s*지도|미탐색|불확실성)"
+        },
+        {
+          "name": "F03_E5_b1_en",
+          "value": "\\b(?:rescue|victim|survivor|missing[\\s\\-]*person|disaster|firefight)"
+        },
+        {
+          "name": "F03_E5_b1_ko",
+          "value": "(?:인명구조|구조대|요구조자|생존자|실종자|재난|소방)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F03_E5_cpc",
+          "value": [
+            "A62B",
+            "G01S5/02",
+            "G01S13/88",
+            "G01V3/12"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F04_E1",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E1_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F04_E1_b0_en",
+          "value": "\\b(?:damage[\\s\\-]*assessment|damage[\\s\\-]*survey|damage[\\s\\-]*estimat|needs[\\s\\-]*assessment|demand[\\s\\-]*estimat|loss[\\s\\-]*assessment|damage[\\s\\-]*claim|damage[\\s\\-]*report|affected[\\s\\-]*household|victim[\\s\\-]*registr)"
+        },
+        {
+          "name": "F04_E1_b0_ko",
+          "value": "(?:피해\\s*조사|피해\\s*산정|피해\\s*접수|수요\\s*조사|수요\\s*예측|이재민\\s*등록|피해\\s*신고)"
+        },
+        {
+          "name": "F04_E1_b1_en",
+          "value": "\\b(?:disaster|flood|earthquake|typhoon|hurricane|wildfire|disaster[\\s\\-]*victim|recover)"
+        },
+        {
+          "name": "F04_E1_b1_ko",
+          "value": "(?:재난|재해|홍수|지진|태풍|산불|이재민|복구)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F04_E1_cpc",
+          "value": [
+            "G06Q50/26",
+            "G06Q40/08"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F04_E2",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E2_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F04_E2_b0_en",
+          "value": "\\b(?:relief[\\s\\-]*distribution|relief[\\s\\-]*supplies|relief[\\s\\-]*material|humanitarian[\\s\\-]*logistic|aid[\\s\\-]*distribution|emergency[\\s\\-]*supplies|supply[\\s\\-]*allocation|deprivation|equit|fairness)"
+        },
+        {
+          "name": "F04_E2_b0_ko",
+          "value": "(?:구호물자|구호\\s*물품|물자\\s*배분|지원\\s*배분|형평|공평)"
+        },
+        {
+          "name": "F04_E2_b1_en",
+          "value": "\\b(?:allocat|distribut|dispatch|optimi|schedul|prioriti)"
+        },
+        {
+          "name": "F04_E2_b1_ko",
+          "value": "(?:배분|분배|배송|최적화|우선순위)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F04_E2_cpc",
+          "value": [
+            "G06Q50/26",
+            "G06Q10/04",
+            "G06Q10/08",
+            "G06Q10/06"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F04_E3",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E3_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F04_E3_b0_en",
+          "value": "\\b(?:temporary[\\s\\-]*housing|temporary[\\s\\-]*shelter|emergency[\\s\\-]*shelter|evacuation[\\s\\-]*shelter|shelter[\\s\\-]*allocation|shelter[\\s\\-]*assignment|accommodation|displaced)"
+        },
+        {
+          "name": "F04_E3_b0_ko",
+          "value": "(?:임시주거|임시\\s*주택|대피소|대피시설|구호소|이재민\\s*수용|거처)"
+        },
+        {
+          "name": "F04_E3_b1_en",
+          "value": "\\b(?:allocat|assign|match|priorit|capacity|decision[\\s\\-]*support)"
+        },
+        {
+          "name": "F04_E3_b1_ko",
+          "value": "(?:배정|배분|매칭|우선순위|수용\\s*능력|의사결정)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F04_E3_cpc",
+          "value": [
+            "G06Q50/26"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F04_E4",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F04_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F04_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F04_E4_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F04_E4_b0_en",
+          "value": "\\b(?:dynamic[\\s\\-]*resource[\\s\\-]*allocation|dynamic[\\s\\-]*allocation|reallocat|real[\\s\\-]*time[\\s\\-]*allocation|adaptive[\\s\\-]*allocation|rolling[\\s\\-]*horizon|re[\\s\\-]*plan)"
+        },
+        {
+          "name": "F04_E4_b0_ko",
+          "value": "(?:동적\\s*배분|재배분|실시간\\s*배분|재계획)"
+        },
+        {
+          "name": "F04_E4_b1_en",
+          "value": "\\b(?:recover|relief|victim|shelter|support|aid)"
+        },
+        {
+          "name": "F04_E4_b1_ko",
+          "value": "(?:복구|구호|이재민|대피소|지원)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F04_E4_cpc",
+          "value": [
+            "G06Q50/26",
+            "G06Q10/04",
+            "G06Q10/06"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F05_E1",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E1_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F05_E1_b0_en",
+          "value": "\\b(?:event[\\s\\-]*log|activity[\\s\\-]*log|radio[\\s\\-]*log|communication[\\s\\-]*log|record|timeline|time[\\s\\-]*synchroni|clock[\\s\\-]*offset|time[\\s\\-]*alignment|log[\\s\\-]*alignment|log[\\s\\-]*integration)"
+        },
+        {
+          "name": "F05_E1_b0_ko",
+          "value": "(?:기록|로그|무전\\s*기록|상황일지|시간\\s*동기화|시간\\s*정렬|타임라인)"
+        },
+        {
+          "name": "F05_E1_b1_en",
+          "value": "\\b(?:incident|emergency[\\s\\-]*response|dispatch|multi[\\s\\-]*agency|command)"
+        },
+        {
+          "name": "F05_E1_b1_ko",
+          "value": "(?:사고|재난\\s*대응|출동|다기관|지휘)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F05_E1_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F05_E2",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E2_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F05_E2_b0_en",
+          "value": "\\b(?:reconstruct|replay|playback|reenact|re[\\s\\-]*enact|retrospective|post[\\s\\-]*incident|after[\\s\\-]*action|after[\\s\\-]*action|debrief)"
+        },
+        {
+          "name": "F05_E2_b0_ko",
+          "value": "(?:재현|재구성|리플레이|사후\\s*분석|사후\\s*평가|디브리핑)"
+        },
+        {
+          "name": "F05_E2_b1_en",
+          "value": "\\b(?:incident|accident|disaster|emergency[\\s\\-]*response|fire)"
+        },
+        {
+          "name": "F05_E2_b1_ko",
+          "value": "(?:사고|재난|화재|대응)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F05_E2_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F05_E3",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E3_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F05_E3_b0_en",
+          "value": "\\b(?:process[\\s\\-]*mining|workflow[\\s\\-]*analysis|bottleneck|procedure[\\s\\-]*compliance|response[\\s\\-]*process|conformance[\\s\\-]*check)"
+        },
+        {
+          "name": "F05_E3_b0_ko",
+          "value": "(?:프로세스\\s*마이닝|업무\\s*흐름|병목|절차\\s*준수|대응\\s*절차)"
+        },
+        {
+          "name": "F05_E3_b1_en",
+          "value": "\\b(?:emergency|disaster|incident|dispatch|rescue)"
+        },
+        {
+          "name": "F05_E3_b1_ko",
+          "value": "(?:재난|사고|출동|인명구조|긴급\\s*출동)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F05_E3_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F05_E4",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F05_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F05_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F05_E4_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F05_E4_b0_en",
+          "value": "\\b(?:training|exercise|drill|simulat|scenario[\\s\\-]*injection|virtual[\\s\\-]*reality|serious[\\s\\-]*game)"
+        },
+        {
+          "name": "F05_E4_b0_ko",
+          "value": "(?:훈련|모의훈련|연습|시뮬레이션|가상현실|시나리오)"
+        },
+        {
+          "name": "F05_E4_b1_en",
+          "value": "\\b(?:disaster|emergency[\\s\\-]*response|incident[\\s\\-]*command|multi[\\s\\-]*agency|firefight|evacuation)"
+        },
+        {
+          "name": "F05_E4_b1_ko",
+          "value": "(?:재난|재난\\s*대응|다기관|소방|대피|지휘)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F05_E4_cpc",
+          "value": [
+            "G09B9",
+            "G09B19",
+            "G06Q50/26"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F06_E1",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E1_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E1_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E1_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E1_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E1_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F06_E1_b0_en",
+          "value": "\\b(?:interdependen|dependency[\\s\\-]*model|coupled[\\s\\-]*infrastructure|critical[\\s\\-]*infrastructure|infrastructure[\\s\\-]*network|lifeline|multi[\\s\\-]*layer[\\s\\-]*network|system[\\s\\-]*of[\\s\\-]*systems)"
+        },
+        {
+          "name": "F06_E1_b0_ko",
+          "value": "(?:상호의존|의존\\s*관계|기반시설|생명선|다층\\s*네트워크)"
+        },
+        {
+          "name": "F06_E1_b1_en",
+          "value": "\\b(?:power|electric|water|communication[\\s\\-]*network|telecommunication|transport|gas|drainage)"
+        },
+        {
+          "name": "F06_E1_b1_ko",
+          "value": "(?:전력|상수도|통신망|교통|가스|배수)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F06_E1_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F06_E2",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E2_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E2_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E2_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E2_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E2_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F06_E2_b0_en",
+          "value": "\\b(?:cascad|propagat|domino|knock[\\s\\-]*on|ripple[\\s\\-]*effect|service[\\s\\-]*disruption|service[\\s\\-]*interruption|outage[\\s\\-]*propagation|failure[\\s\\-]*propagation)"
+        },
+        {
+          "name": "F06_E2_b0_ko",
+          "value": "(?:연쇄|전파|도미노|파급|서비스\\s*중단)"
+        },
+        {
+          "name": "F06_E2_b1_en",
+          "value": "\\b(?:infrastructure|power[\\s\\-]*grid|network|lifeline|facility)"
+        },
+        {
+          "name": "F06_E2_b1_ko",
+          "value": "(?:기반시설|전력망|네트워크|시설)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F06_E2_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635",
+            "G06F30/20"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F06_E3",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E3_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E3_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E3_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E3_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E3_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F06_E3_b0_en",
+          "value": "\\b(?:bayesian[\\s\\-]*network|probabilistic[\\s\\-]*model|uncertainty[\\s\\-]*quantif|monte[\\s\\-]*carlo|fragility|risk[\\s\\-]*propagation|scenario[\\s\\-]*tree|confidence[\\s\\-]*interval)"
+        },
+        {
+          "name": "F06_E3_b0_ko",
+          "value": "(?:베이지안|확률\\s*모델|불확실성|몬테카를로|취약도)"
+        },
+        {
+          "name": "F06_E3_b1_en",
+          "value": "\\b(?:infrastructure|compound|multi[\\s\\-]*hazard|cascad|disaster|outage)"
+        },
+        {
+          "name": "F06_E3_b1_ko",
+          "value": "(?:기반시설|복합재난|연쇄|재난|대규모\\s*정전)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F06_E3_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635",
+            "G06N7/01"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F06_E4",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E4_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E4_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E4_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E4_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E4_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F06_E4_b0_en",
+          "value": "\\b(?:missing[\\s\\-]*data|missing[\\s\\-]*observation|sensor[\\s\\-]*failure|data[\\s\\-]*gap|incomplete[\\s\\-]*observation|online[\\s\\-]*updat|real[\\s\\-]*time[\\s\\-]*updat|data[\\s\\-]*assimilation|digital[\\s\\-]*twin|state[\\s\\-]*estimation)"
+        },
+        {
+          "name": "F06_E4_b0_ko",
+          "value": "(?:결측|관측\\s*결손|센서\\s*고장|실시간\\s*갱신|데이터\\s*동화|디지털\\s*트윈|상태\\s*추정)"
+        },
+        {
+          "name": "F06_E4_b1_en",
+          "value": "\\b(?:infrastructure|flood|power|network|cascad|disaster)"
+        },
+        {
+          "name": "F06_E4_b1_ko",
+          "value": "(?:기반시설|침수|전력|네트워크|연쇄|재난)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F06_E4_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    },
+    {
+      "label": "F06_E5",
+      "sql": "SELECT COUNT(*) AS n_pub, COUNT(DISTINCT family_id) AS n_fam,\n  COUNTIF(country_code='KR') AS n_kr\nFROM `idyllic-coder-510805-s5.patents_work.pat_candidates`\nWHERE (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E5_b0_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E5_b0_ko)) AND (REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @F06_E5_b1_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @F06_E5_b1_ko))\n  AND ((REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en,''),' ',IFNULL(abstract_en,''))), @ctx_en) OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko,''),' ',IFNULL(abstract_ko,'')), @ctx_ko)) OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@F06_E5_cpc) p WHERE STARTS_WITH(c, p)))",
+      "est_gb": 4.5,
+      "params": [
+        {
+          "name": "F06_E5_b0_en",
+          "value": "\\b(?:restoration|repair[\\s\\-]*schedul|recovery[\\s\\-]*sequenc|recovery[\\s\\-]*priorit|restoration[\\s\\-]*priorit|crew[\\s\\-]*dispatch|repair[\\s\\-]*crew|service[\\s\\-]*restoration)"
+        },
+        {
+          "name": "F06_E5_b0_ko",
+          "value": "(?:복구\\s*순서|복구\\s*우선순위|복구\\s*계획|응급복구|복구\\s*인력)"
+        },
+        {
+          "name": "F06_E5_b1_en",
+          "value": "\\b(?:infrastructure|power|distribution[\\s\\-]*network|water|network|disaster|outage)"
+        },
+        {
+          "name": "F06_E5_b1_ko",
+          "value": "(?:기반시설|전력|배전|상수도|재난|정전\\s*사고)"
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난)"
+        },
+        {
+          "name": "F06_E5_cpc",
+          "value": [
+            "G06Q50/06",
+            "G06Q10/0635",
+            "G06Q10/04",
+            "G06Q10/20"
+          ]
+        }
+      ],
+      "billed_gb": 4.5
+    }
+  ]
+}
