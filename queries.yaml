@@ -1,0 +1,79 @@
+# 분석과업 2 — OpenAlex 수집 검색식 (부록 D.1 검색 시드 기반)
+# - 각 R의 seed 블록은 OR로 묶이고, 공통 context 블록과 AND로 결합됩니다.
+# - 따옴표("...")는 구(phrase) 검색, 콤마(,)는 쓰지 마세요(OpenAlex 필터 구분자).
+# - 검색 범위: 제목+초록 (title_and_abstract.search)
+
+settings:
+  from_year: 2015
+  to_year: 2026
+  # article, review, preprint, book-chapter, dissertation 등
+  types: [article, review, preprint, book-chapter]
+  languages: []            # 예: [en, ko]  — 비워두면 전체 언어
+  max_per_query: 5000      # R별 수집 상한(안전장치)
+
+# 모든 R 검색식에 AND로 붙는 재난 맥락어
+context: >-
+  (disaster OR disasters OR emergency OR "emergency management"
+   OR "crisis management" OR "public safety" OR hazard OR "disaster risk")
+
+queries:
+  R01:
+    label: 상황·접근성 조건에 맞게 위험정보를 행동지원으로 전환
+    seed: >-
+      ("personalized warning" OR "personalised warning" OR "accessible alert"
+       OR "accessible warning" OR "protective action" OR "multilingual warning"
+       OR "impact-based warning" OR "warning message" OR "evacuation decision")
+  R02:
+    label: 다기관 재난정보의 정합성과 대응상태를 통합
+    seed: >-
+      ("common operational picture" OR "incident data fusion" OR interoperability
+       OR "multi-agency information sharing" OR "inter-agency coordination"
+       OR "shared situational awareness")
+  R03:
+    label: 상황변화에 맞추어 대응자원과 이동계획을 재조정
+    seed: >-
+      ("resource allocation" OR "dynamic dispatch" OR "evacuation routing"
+       OR "relief distribution" OR "ambulance dispatch" OR "search planning"
+       OR "dynamic evacuation")
+  R04:
+    label: 악조건 현장의 인명위치와 안전상태를 추정
+    seed: >-
+      ("victim localization" OR "survivor detection" OR "rescue localization"
+       OR "firefighter tracking" OR "first responder tracking"
+       OR "indoor positioning" OR "responder safety monitoring")
+  R05:
+    label: 통신장애에서도 필수 재난정보의 전달을 유지
+    seed: >-
+      ("resilient communication" OR "emergency communication network"
+       OR "mission critical communication" OR "network failover"
+       OR "public safety network" OR "delay tolerant network"
+       OR "communication outage")
+  R06:
+    label: 복합재난의 연쇄영향과 불확실성을 예측
+    seed: >-
+      ("cascading effects" OR "cascading failure" OR "cascading risk"
+       OR "compound disaster" OR "multi-hazard" OR "infrastructure interdependency"
+       OR "interdependent infrastructure")
+  R07:
+    label: 이질 관측정보를 결합해 국소 위험징후를 탐지
+    seed: >-
+      ("sensor fusion" OR "multimodal data" OR "multi-source data"
+       OR "crowd risk" OR "crowd crush" OR "anomaly detection"
+       OR "early warning detection")
+  R08:
+    label: 근거 기반으로 잠재위험과 안전관리 사각지대를 식별
+    seed: >-
+      ("emerging risk" OR "horizon scanning" OR "safety blind spot"
+       OR "latent risk" OR "near miss" OR "weak signal")
+  R09:
+    label: 피해와 생활수요에 맞추어 회복지원 우선순위를 산정
+    seed: >-
+      ("recovery prioritization" OR "restoration prioritization"
+       OR "temporary housing" OR "equitable recovery" OR "recovery assistance"
+       OR "service restoration")
+  R10:
+    label: 대응기록을 재현하여 훈련과 재발방지 개선안을 도출
+    seed: >-
+      ("after action review" OR "after-action" OR "incident reconstruction"
+       OR "lessons learned" OR "multi-agency exercise" OR "simulation training"
+       OR "post-incident learning")
