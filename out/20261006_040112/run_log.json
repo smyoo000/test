@@ -1,0 +1,34 @@
+{
+  "run_at": "2026-10-06T04:01:12",
+  "api": "https://api.openalex.org/works",
+  "settings": {
+    "from_year": 2015,
+    "to_year": 2026,
+    "types": [
+      "article",
+      "review",
+      "preprint",
+      "book-chapter"
+    ],
+    "languages": [],
+    "max_per_query": 5000
+  },
+  "context": "(disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR hazard OR \"disaster risk\")",
+  "queries": {
+    "R03": {
+      "label": "상황변화에 맞추어 대응자원과 이동계획을 재조정",
+      "filter": "title_and_abstract.search:((\"resource allocation\" AND (relief OR rescue OR dispatch OR evacuation OR \"emergency response\")) OR \"dynamic dispatch\" OR \"evacuation routing\" OR \"relief distribution\" OR \"ambulance dispatch\" OR \"search planning\" OR \"dynamic evacuation\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR hazard OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 4173
+    },
+    "R06": {
+      "label": "복합재난의 연쇄영향과 불확실성을 예측",
+      "filter": "title_and_abstract.search:(\"cascading effects\" OR \"cascading failure\" OR \"cascading risk\" OR \"compound disaster\" OR (\"multi-hazard\" AND (interaction OR cascading OR compound OR concurrent OR consecutive)) OR \"infrastructure interdependency\" OR \"interdependent infrastructure\" OR \"hazard interaction\" OR \"domino effect\" OR \"concurrent hazards\" OR \"consecutive disasters\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR hazard OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 3419
+    },
+    "R10": {
+      "label": "대응기록을 재현하여 훈련과 재발방지 개선안을 도출",
+      "filter": "title_and_abstract.search:(\"after action review\" OR \"after-action\" OR \"incident reconstruction\" OR (\"lessons learned\" AND (exercise OR drill OR debriefing OR \"after action\" OR \"incident review\")) OR \"multi-agency exercise\" OR (\"simulation training\" AND (disaster OR \"mass casualty\" OR \"incident command\")) OR \"post-incident learning\" OR \"tabletop exercise\" OR \"disaster drill\" OR \"emergency exercise\" OR \"disaster simulation\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR hazard OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 1867
+    }
+  }
+}
