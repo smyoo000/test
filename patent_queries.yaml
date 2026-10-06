@@ -19,7 +19,7 @@
 #   단어 시작 경계만 걸리므로 "cascad"처럼 어간만 써도 cascade/cascading이 함께 잡힙니다.
 
 settings:
-  project: YOUR_GCP_PROJECT_ID      # 쿼리 비용이 청구될 GCP 프로젝트 ID
+  project: idyllic-coder-510805-s5     # 쿼리 비용이 청구될 GCP 프로젝트 ID
   dataset: patents_work             # 후보 테이블을 저장할 내 데이터셋
   location: US                      # 공개 데이터셋 위치와 동일해야 함
   filing_from: 20060101             # 출원일 YYYYMMDD (20년)
