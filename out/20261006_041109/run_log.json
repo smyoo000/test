@@ -1,0 +1,104 @@
+{
+  "run_at": "2026-10-06T04:11:09",
+  "api": "https://api.openalex.org/works",
+  "settings": {
+    "from_year": 2015,
+    "to_year": 2026,
+    "types": [
+      "article",
+      "review",
+      "preprint",
+      "book-chapter"
+    ],
+    "languages": [],
+    "max_per_query": 5000
+  },
+  "context": "(disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\")",
+  "queries": {
+    "R01": {
+      "label": "상황·접근성 조건에 맞게 위험정보를 행동지원으로 전환",
+      "filter": "title_and_abstract.search:(\"personalized warning\" OR \"personalised warning\" OR \"accessible alert\" OR \"accessible warning\" OR \"protective action\" OR \"multilingual warning\" OR \"impact-based warning\" OR \"warning message\" OR \"evacuation decision\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 1541,
+      "retrieved": 1541,
+      "with_abstract": 1142,
+      "abstract_rate": 0.741
+    },
+    "R02": {
+      "label": "다기관 재난정보의 정합성과 대응상태를 통합",
+      "filter": "title_and_abstract.search:(\"common operational picture\" OR \"incident data fusion\" OR (interoperability AND (responder OR responders OR \"incident command\" OR agencies OR \"information sharing\" OR \"situational awareness\")) OR \"multi-agency information sharing\" OR \"inter-agency coordination\" OR \"shared situational awareness\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 1234,
+      "retrieved": 1235,
+      "with_abstract": 1101,
+      "abstract_rate": 0.891
+    },
+    "R03": {
+      "label": "상황변화에 맞추어 대응자원과 이동계획을 재조정",
+      "filter": "title_and_abstract.search:((\"resource allocation\" AND (relief OR rescue OR dispatch OR evacuation OR \"emergency response\")) OR \"dynamic dispatch\" OR \"evacuation routing\" OR \"relief distribution\" OR \"ambulance dispatch\" OR \"search planning\" OR \"dynamic evacuation\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 4039,
+      "retrieved": 4047,
+      "with_abstract": 3237,
+      "abstract_rate": 0.8
+    },
+    "R04": {
+      "label": "악조건 현장의 인명위치와 안전상태를 추정",
+      "filter": "title_and_abstract.search:(\"victim localization\" OR \"survivor detection\" OR \"rescue localization\" OR \"firefighter tracking\" OR \"first responder tracking\" OR \"indoor positioning\" OR \"responder safety monitoring\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 229,
+      "retrieved": 229,
+      "with_abstract": 199,
+      "abstract_rate": 0.869
+    },
+    "R05": {
+      "label": "통신장애에서도 필수 재난정보의 전달을 유지",
+      "filter": "title_and_abstract.search:(\"resilient communication\" OR \"emergency communication network\" OR \"mission critical communication\" OR \"network failover\" OR \"public safety network\" OR \"delay tolerant network\" OR \"communication outage\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 641,
+      "retrieved": 643,
+      "with_abstract": 475,
+      "abstract_rate": 0.739
+    },
+    "R06": {
+      "label": "복합재난의 연쇄영향과 불확실성을 예측",
+      "filter": "title_and_abstract.search:(\"cascading effects\" OR \"cascading failure\" OR \"cascading risk\" OR \"compound disaster\" OR (\"multi-hazard\" AND (interaction OR cascading OR compound OR concurrent OR consecutive)) OR \"infrastructure interdependency\" OR \"interdependent infrastructure\" OR \"hazard interaction\" OR \"domino effect\" OR \"concurrent hazards\" OR \"consecutive disasters\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 2462,
+      "retrieved": 2461,
+      "with_abstract": 1768,
+      "abstract_rate": 0.718
+    },
+    "R07": {
+      "label": "이질 관측정보를 결합해 국소 위험징후를 탐지",
+      "filter": "title_and_abstract.search:(\"sensor fusion\" OR (\"multimodal data\" AND (flood OR flooding OR landslide OR earthquake OR wildfire OR typhoon OR tsunami OR crowd OR \"early warning\")) OR (\"multi-source data\" AND (flood OR flooding OR landslide OR earthquake OR wildfire OR typhoon OR tsunami OR crowd OR \"early warning\")) OR \"crowd risk\" OR \"crowd crush\" OR (\"anomaly detection\" AND (flood OR flooding OR landslide OR earthquake OR wildfire OR typhoon OR tsunami OR crowd OR \"early warning\")) OR \"early warning detection\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 1319,
+      "retrieved": 1320,
+      "with_abstract": 1088,
+      "abstract_rate": 0.824
+    },
+    "R08": {
+      "label": "근거 기반으로 잠재위험과 안전관리 사각지대를 식별",
+      "filter": "title_and_abstract.search:(\"emerging risk\" OR \"horizon scanning\" OR \"safety blind spot\" OR \"latent risk\" OR (\"near miss\" AND (accident OR accidents OR \"safety management\" OR occupational OR industrial)) OR (\"weak signal\" AND (foresight OR \"early warning\" OR crisis OR \"risk management\"))) AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 486,
+      "retrieved": 486,
+      "with_abstract": 404,
+      "abstract_rate": 0.831
+    },
+    "R09": {
+      "label": "피해와 생활수요에 맞추어 회복지원 우선순위를 산정",
+      "filter": "title_and_abstract.search:(\"recovery prioritization\" OR \"restoration prioritization\" OR \"temporary housing\" OR \"equitable recovery\" OR \"recovery assistance\" OR \"service restoration\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 936,
+      "retrieved": 936,
+      "with_abstract": 724,
+      "abstract_rate": 0.774
+    },
+    "R10": {
+      "label": "대응기록을 재현하여 훈련과 재발방지 개선안을 도출",
+      "filter": "title_and_abstract.search:(\"after action review\" OR \"after-action\" OR \"incident reconstruction\" OR (\"lessons learned\" AND (exercise OR drill OR debriefing OR \"after action\" OR \"incident review\")) OR \"multi-agency exercise\" OR (\"simulation training\" AND (disaster OR \"mass casualty\" OR \"incident command\")) OR \"post-incident learning\" OR \"tabletop exercise\" OR \"disaster drill\" OR \"emergency exercise\" OR \"disaster simulation\") AND (disaster OR disasters OR emergency OR \"emergency management\" OR \"crisis management\" OR \"public safety\" OR \"natural hazard\" OR \"natural hazards\" OR \"hazard mitigation\" OR \"disaster risk\"),publication_year:2015-2026,type:article|review|preprint|book-chapter",
+      "total_count": 1833,
+      "retrieved": 1835,
+      "with_abstract": 1572,
+      "abstract_rate": 0.857
+    }
+  },
+  "summary": {
+    "unique_works": 14339,
+    "unique_with_abstract": 11395,
+    "hits_total": 14733
+  }
+}
