@@ -1,0 +1,102 @@
+{
+  "run_at": "2026-10-06T13:44:27",
+  "cmd": "stage1",
+  "settings": {
+    "project": "idyllic-coder-510805-s5",
+    "dataset": "patents_work",
+    "candidate_table": "pat_candidates_v2",
+    "location": "US",
+    "filing_from": 20060101,
+    "filing_to": 20251231,
+    "countries": [
+      "KR",
+      "US",
+      "EP",
+      "JP",
+      "CN",
+      "WO"
+    ],
+    "search_claims": false,
+    "max_gb_billed": 700
+  },
+  "source": "patents-public-data.patents.publications",
+  "candidate_table": "`idyllic-coder-510805-s5.patents_work.pat_candidates_v2`",
+  "candidate_rows": 4527005,
+  "queries": [
+    {
+      "label": "stage1",
+      "sql": "\nCREATE OR REPLACE TABLE `idyllic-coder-510805-s5.patents_work.pat_candidates_v2` AS\nWITH base AS (\n  SELECT\n    publication_number, application_number, country_code, kind_code, family_id,\n    filing_date, priority_date, publication_date, grant_date,\n    (SELECT text FROM UNNEST(title_localized)    WHERE language = 'en' LIMIT 1) AS title_en,\n    (SELECT text FROM UNNEST(title_localized)    WHERE language = 'ko' LIMIT 1) AS title_ko,\n    (SELECT text FROM UNNEST(abstract_localized) WHERE language = 'en' LIMIT 1) AS abstract_en,\n    (SELECT text FROM UNNEST(abstract_localized) WHERE language = 'ko' LIMIT 1) AS abstract_ko\n    , CAST(NULL AS STRING) AS claims_en,\n    ARRAY(SELECT DISTINCT c.code FROM UNNEST(cpc) c) AS cpc_codes,\n    ARRAY(SELECT DISTINCT i.code FROM UNNEST(ipc) i) AS ipc_codes,\n    ARRAY(SELECT a.name FROM UNNEST(assignee_harmonized) a) AS assignees,\n    ARRAY(SELECT DISTINCT a.country_code FROM UNNEST(assignee_harmonized) a) AS assignee_countries\n  FROM `patents-public-data.patents.publications`\n  WHERE country_code IN UNNEST(@countries)\n    AND filing_date BETWEEN @f_from AND @f_to\n)\nSELECT * FROM base\nWHERE REGEXP_CONTAINS(LOWER(CONCAT(IFNULL(title_en, ''), ' ', IFNULL(abstract_en, ''))), @ctx_en)\n   OR REGEXP_CONTAINS(CONCAT(IFNULL(title_ko, ''), ' ', IFNULL(abstract_ko, '')), @ctx_ko)\n   \n   OR EXISTS (SELECT 1 FROM UNNEST(ARRAY_CONCAT(cpc_codes, ipc_codes)) c, UNNEST(@all_cpc) p\n              WHERE STARTS_WITH(c, p))\n",
+      "est_gb": 268.42,
+      "params": [
+        {
+          "name": "countries",
+          "value": [
+            "KR",
+            "US",
+            "EP",
+            "JP",
+            "CN",
+            "WO"
+          ]
+        },
+        {
+          "name": "f_from",
+          "value": 20060101
+        },
+        {
+          "name": "f_to",
+          "value": 20251231
+        },
+        {
+          "name": "ctx_en",
+          "value": "\\b(?:disaster|earthquake|tsunami|typhoon|hurricane|tropical[\\s\\-]*cyclone|tornado|wildfire|forest[\\s\\-]*fire|bushfire|landslide|debris[\\s\\-]*flow|flash[\\s\\-]*flood|flood[\\s\\-]*disaster|flood[\\s\\-]*damage|flood[\\s\\-]*warning|flood[\\s\\-]*risk|urban[\\s\\-]*flood|river[\\s\\-]*flood|floodwater|flood[\\s\\-]*water|inundation|evacuee|evacuation[\\s\\-]*route|evacuation[\\s\\-]*guid|evacuation[\\s\\-]*plan|evacuation[\\s\\-]*order|evacuation[\\s\\-]*instruction|evacuation[\\s\\-]*shelter|evacuation[\\s\\-]*center|emergency[\\s\\-]*evacuation|emergency[\\s\\-]*management|emergency[\\s\\-]*response|emergency[\\s\\-]*responder|emergency[\\s\\-]*rescue|emergency[\\s\\-]*shelter|emergency[\\s\\-]*alert|emergency[\\s\\-]*warning|emergency[\\s\\-]*situation|emergency[\\s\\-]*dispatch|emergency[\\s\\-]*command|emergency[\\s\\-]*communication|emergency[\\s\\-]*information|emergency[\\s\\-]*call|public[\\s\\-]*safety[\\s\\-]*answering|psap|911[\\s\\-]*call|search[\\s\\-]*and[\\s\\-]*rescue|rescue[\\s\\-]*team|rescuer|first[\\s\\-]*responder|firefight|fire[\\s\\-]*fighting|fire[\\s\\-]*scene|fireground|fire[\\s\\-]*department|public[\\s\\-]*safety|crowd[\\s\\-]*crush|stampede|hazardous[\\s\\-]*material|chemical[\\s\\-]*accident|nuclear[\\s\\-]*accident|radiological[\\s\\-]*emergency|radiation[\\s\\-]*emergency|power[\\s\\-]*outage|blackout|heat[\\s\\-]*wave|mass[\\s\\-]*casualty|casualties|disaster[\\s\\-]*victim|trapped[\\s\\-]*person|incident[\\s\\-]*command|crisis[\\s\\-]*management|humanitarian|calamit|critical[\\s\\-]*infrastructure|lifeline|cascading[\\s\\-]*failure|major[\\s\\-]*accident|industrial[\\s\\-]*accident|safety[\\s\\-]*accident|potential[\\s\\-]*safety[\\s\\-]*hazard|hidden[\\s\\-]*danger)"
+        },
+        {
+          "name": "ctx_ko",
+          "value": "(?:재난|재해|지진|쓰나미|해일|태풍|홍수|침수|산불|산사태|대피|피난|이재민|인명구조|인명\\s*구조|구조대|구조\\s*요청|구급|소방|화재|인명|군중|압사|대규모\\s*정전|정전\\s*사고|폭염|화학사고|방사능|구호|상황실|재난안전|비상\\s*대피|비상\\s*상황|긴급\\s*구조|긴급\\s*출동|긴급재난|긴급신고|112\\s*신고|119\\s*신고|중대재해|안전사고|기반시설|연쇄\\s*사고)"
+        },
+        {
+          "name": "all_cpc",
+          "value": [
+            "A61B5/05",
+            "A61B5/0507",
+            "A62B",
+            "B64U",
+            "G01C21",
+            "G01C21/20",
+            "G01C22",
+            "G01S13/88",
+            "G01S5/02",
+            "G01V3/12",
+            "G05D1",
+            "G06F16/215",
+            "G06F18/25",
+            "G06F30/20",
+            "G06F40",
+            "G06N7/01",
+            "G06Q10/04",
+            "G06Q10/06",
+            "G06Q10/0635",
+            "G06Q10/08",
+            "G06Q10/20",
+            "G06Q40/08",
+            "G06Q50/06",
+            "G06Q50/26",
+            "G06V20/17",
+            "G08B21/10",
+            "G08B25",
+            "G08B27",
+            "G08B7/06",
+            "G08G1",
+            "H04W28/02",
+            "H04W4/02",
+            "H04W4/06",
+            "H04W4/90",
+            "H04W84/18"
+          ]
+        }
+      ],
+      "billed_gb": 268.42
+    }
+  ]
+}
